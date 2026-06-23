@@ -1,0 +1,22 @@
+{
+  "date": "2026-06-23",
+  "items": [
+    {
+      "date": "2026-06-23",
+      "title": "Prompt Injection as Role Confusion",
+      "url": "https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-22T23:59:53+00:00",
+      "category": "AX · 블로그",
+      "summary": "Prompt Injection as Role Confusion First, I absolutely love this: This is a blog-style writeup of the paper. I wish every paper would come with one of these. Academic writing is…",
+      "tags": [
+        "rag",
+        "llm",
+        "model",
+        "prompt"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
