@@ -1,6 +1,6 @@
 ---
 title: AX란 무엇인가
-category: 개념
+category: 개념·관점
 categoryEn: Concept
 stage: 탐색 중
 updated: "2026-06-22"
@@ -10,7 +10,7 @@ related:
   - label: 어떤 루프를 먼저 고를까
     href: "#"
   - label: 승인 게이트
-    href: "#"
+    href: "/guide/approval-gates"
 slides:
   - kick: AX Field Guide
     title: AX란 무엇인가
