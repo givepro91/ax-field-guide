@@ -40,6 +40,7 @@ const { slides = [] } = Astro.props;
     const show = (n: number) => {
       i = Math.max(0, Math.min(slides.length - 1, n));
       slides.forEach((s, k) => s.classList.toggle('on', k === i));
+      document.dispatchEvent(new CustomEvent('deck:slide', { detail: i })); // 슬라이드 넘기면 주석 클리어
       if (count) count.textContent = `${i + 1} / ${slides.length}`;
       if (prog) prog.style.width = `${((i + 1) / slides.length) * 100}%`;
     };

@@ -1,0 +1,218 @@
+---
+// 전역 주석/드로잉 오버레이 — 발표·설명 중 밑줄·형광펜·자유선.
+// 휘발성(새로고침하면 사라짐), 외부 의존 없음(vanilla canvas), 정적 배포 그대로.
+// Base 레이아웃에 한 번 들어가 모든 페이지에 적용된다. D 키 또는 펜 버튼으로 토글.
+---
+
+<button id="draw-launch" class="draw-launch" aria-label="화면에 그리기 (D)" title="화면에 그리기 (D)">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+  </svg>
+</button>
+
+<canvas id="draw-canvas" class="draw-canvas" aria-hidden="true"></canvas>
+
+<div id="draw-tools" class="draw-tools" role="toolbar" aria-label="그리기 도구" hidden>
+  <button class="dt-tool is-on" data-tool="pen" title="펜 (P)">✎ 펜 <kbd class="dt-key">P</kbd></button>
+  <button class="dt-tool" data-tool="hl" title="형광펜 (H)">▰ 형광펜 <kbd class="dt-key">H</kbd></button>
+  <span class="dt-sep"></span>
+  <button class="dt-color is-on" data-color="#ef4444" style="--c:#ef4444" title="빨강 (1)" aria-label="빨강 (1)"><span>1</span></button>
+  <button class="dt-color" data-color="#2563eb" style="--c:#2563eb" title="파랑 (2)" aria-label="파랑 (2)"><span>2</span></button>
+  <button class="dt-color" data-color="#f59e0b" style="--c:#f59e0b" title="노랑 (3)" aria-label="노랑 (3)"><span>3</span></button>
+  <span class="dt-sep"></span>
+  <button class="dt-act" id="draw-undo" title="되돌리기 (Z / ⌘Z)">↶ 되돌리기 <kbd class="dt-key">Z</kbd></button>
+  <button class="dt-act" id="draw-clear" title="모두 지우기 (C)">🗑 지우기 <kbd class="dt-key">C</kbd></button>
+  <button class="dt-act dt-exit" id="draw-exit" title="끄기 (D)">✕ 끄기 <kbd class="dt-key">D</kbd></button>
+</div>
+
+<style is:global>
+  .draw-launch {
+    position: fixed; right: 18px; bottom: 18px; z-index: 130;
+    width: 42px; height: 42px; border-radius: 999px; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--sub); border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(16,24,40,.06), 0 6px 18px rgba(16,24,40,.08);
+    opacity: .55; transition: opacity .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .draw-launch:hover { opacity: 1; color: var(--accent-ink); border-color: var(--accent-border); }
+  .draw-launch svg { width: 19px; height: 19px; }
+  body.drawing .draw-launch { display: none; }
+  @media print { .draw-launch, .draw-tools { display: none !important; } }
+
+  .draw-canvas {
+    position: fixed; inset: 0; z-index: 200;
+    width: 100vw; height: 100vh; pointer-events: none; touch-action: none;
+  }
+  body.drawing .draw-canvas { pointer-events: auto; cursor: crosshair; }
+
+  .draw-tools {
+    position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 210;
+    display: flex; align-items: center; gap: 6px; padding: 7px 9px;
+    background: rgba(24,24,27,.92); backdrop-filter: blur(8px); border-radius: 999px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.28); font-family: var(--sans);
+  }
+  .draw-tools[hidden] { display: none; }
+  .draw-tools button { cursor: pointer; border: 0; background: transparent; color: #d4d4d8;
+    font-family: var(--sans); font-size: 12.5px; font-weight: 600; border-radius: 999px;
+    padding: 7px 11px; white-space: nowrap; transition: background .12s ease, color .12s ease; }
+  .draw-tools button:hover { background: rgba(255,255,255,.12); color: #fff; }
+  .draw-tools .dt-tool.is-on { background: var(--accent); color: #fff; }
+  .draw-tools .dt-sep { width: 1px; height: 20px; background: rgba(255,255,255,.18); margin: 0 2px; }
+  .draw-tools .dt-color { width: 24px; height: 24px; padding: 0; border-radius: 999px;
+    background: var(--c); border: 2px solid transparent; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
+    display: inline-flex; align-items: center; justify-content: center; }
+  .draw-tools .dt-color:hover { background: var(--c); }
+  .draw-tools .dt-color.is-on { border-color: #fff; }
+  .draw-tools .dt-color span { font-family: var(--mono); font-size: 10px; font-weight: 700;
+    color: #fff; opacity: .9; text-shadow: 0 1px 1px rgba(0,0,0,.35); pointer-events: none; }
+  .draw-tools .dt-exit { color: #fca5a5; }
+  .draw-tools .dt-key { font-family: var(--mono); font-size: 9.5px; font-weight: 700; line-height: 1;
+    color: #d4d4d8; background: rgba(255,255,255,.12); border-radius: 4px; padding: 2px 4px;
+    margin-left: 2px; vertical-align: middle; }
+  .draw-tools .dt-tool.is-on .dt-key { background: rgba(255,255,255,.25); color: #fff; }
+</style>
+
+<script>
+  type Pt = { x: number; y: number };
+  type Stroke = { tool: 'pen' | 'hl'; color: string; size: number; alpha: number; points: Pt[] };
+
+  const canvas = document.getElementById('draw-canvas') as HTMLCanvasElement | null;
+  const launch = document.getElementById('draw-launch');
+  const tools = document.getElementById('draw-tools');
+  if (canvas && launch && tools) {
+    const ctx = canvas.getContext('2d')!;
+    const strokes: Stroke[] = [];
+    let active = false;
+    let tool: 'pen' | 'hl' = 'pen';
+    let color = '#ef4444';
+    let cur: Stroke | null = null;
+    let dpr = 1;
+    const topbar = document.querySelector('.topbar') as HTMLElement | null;
+    let headerH = 0; // sticky 헤더 높이 — 이 띠에는 그리지 않아 헤더가 주석을 가린다
+
+    const sizeFor = (t: 'pen' | 'hl') => (t === 'hl' ? 18 : 3);
+    const alphaFor = (t: 'pen' | 'hl') => (t === 'hl' ? 0.4 : 1);
+
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      headerH = topbar ? topbar.offsetHeight : 0;
+      redraw();
+    };
+
+    // 획은 문서 좌표로 저장하고, 그릴 때 스크롤만큼 평행이동 → 캔버스는 뷰포트 크기지만
+    // 그림은 콘텐츠에 고정돼 스크롤을 따라간다(메모리는 뷰포트 크기로 유지).
+    const redraw = () => {
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
+      const top = document.body.classList.contains('presenting') ? 0 : headerH * dpr;
+      if (top > 0) {
+        ctx.beginPath();
+        ctx.rect(0, top, canvas.width, canvas.height - top);
+        ctx.clip();
+      }
+      ctx.setTransform(dpr, 0, 0, dpr, -window.scrollX * dpr, -window.scrollY * dpr);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      for (const s of strokes) drawStroke(s);
+      if (cur) drawStroke(cur);
+      ctx.restore();
+    };
+
+    const drawStroke = (s: Stroke) => {
+      if (s.points.length === 0) return;
+      ctx.globalAlpha = s.alpha;
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = s.size;
+      ctx.beginPath();
+      ctx.moveTo(s.points[0].x, s.points[0].y);
+      if (s.points.length === 1) ctx.lineTo(s.points[0].x + 0.1, s.points[0].y + 0.1);
+      else for (let i = 1; i < s.points.length; i++) ctx.lineTo(s.points[i].x, s.points[i].y);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    };
+
+    const setActive = (on: boolean) => {
+      active = on;
+      document.body.classList.toggle('drawing', on);
+      tools.hidden = !on;
+      canvas.setAttribute('aria-hidden', on ? 'false' : 'true');
+    };
+
+    // pointer drawing
+    canvas.addEventListener('pointerdown', (e) => {
+      if (!active) return;
+      e.preventDefault();
+      try { canvas.setPointerCapture(e.pointerId); } catch {}
+      cur = { tool, color, size: sizeFor(tool), alpha: alphaFor(tool), points: [{ x: e.clientX + window.scrollX, y: e.clientY + window.scrollY }] };
+      redraw();
+    });
+    canvas.addEventListener('pointermove', (e) => {
+      if (!active || !cur) return;
+      cur.points.push({ x: e.clientX + window.scrollX, y: e.clientY + window.scrollY });
+      redraw();
+    });
+    const finish = () => { if (cur) { strokes.push(cur); cur = null; redraw(); } };
+    canvas.addEventListener('pointerup', finish);
+    canvas.addEventListener('pointercancel', finish);
+
+    // tool / color 선택을 함수로 빼 클릭과 단축키가 공유한다.
+    const selectTool = (t: 'pen' | 'hl') => {
+      tool = t;
+      tools.querySelectorAll<HTMLButtonElement>('.dt-tool').forEach((x) => x.classList.toggle('is-on', x.dataset.tool === t));
+    };
+    const selectColor = (c: string) => {
+      color = c;
+      tools.querySelectorAll<HTMLButtonElement>('.dt-color').forEach((x) => x.classList.toggle('is-on', x.dataset.color === c));
+    };
+    const undo = () => { strokes.pop(); redraw(); };
+    const clearAll = () => { strokes.length = 0; cur = null; redraw(); };
+
+    // toolbar
+    launch.addEventListener('click', () => setActive(true));
+    document.getElementById('draw-exit')!.addEventListener('click', () => setActive(false));
+    document.getElementById('draw-clear')!.addEventListener('click', clearAll);
+    document.getElementById('draw-undo')!.addEventListener('click', undo);
+    tools.querySelectorAll<HTMLButtonElement>('.dt-tool').forEach((b) =>
+      b.addEventListener('click', () => selectTool(b.dataset.tool as 'pen' | 'hl')),
+    );
+    tools.querySelectorAll<HTMLButtonElement>('.dt-color').forEach((b) =>
+      b.addEventListener('click', () => selectColor(b.dataset.color!)),
+    );
+
+    // 단축키 — 모두 e.code(물리 키 위치)로 잡아 한/영·IME 상태와 무관하게 동작한다(e.key 는 한글 모드에서 'ㅇ' 등).
+    document.addEventListener('keydown', (e) => {
+      const t = e.target as HTMLElement | null;
+      const typing = !!t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable);
+      if (e.isComposing || typing || e.altKey) return;
+
+      // 되돌리기는 ⌘Z/Ctrl+Z 도 지원(그리는 중일 때만).
+      if (active && e.code === 'KeyZ' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); undo(); return; }
+      if (e.metaKey || e.ctrlKey) return;
+
+      // D: 어디서든 드로잉 토글
+      if (e.code === 'KeyD') { e.preventDefault(); setActive(!active); return; }
+      // 나머지는 그리는 중에만
+      if (!active) return;
+      if (e.code === 'Escape') { e.preventDefault(); setActive(false); }
+      else if (e.code === 'KeyP') { e.preventDefault(); selectTool('pen'); }
+      else if (e.code === 'KeyH') { e.preventDefault(); selectTool('hl'); }
+      else if (e.code === 'KeyZ') { e.preventDefault(); undo(); }
+      else if (e.code === 'KeyC') { e.preventDefault(); clearAll(); }
+      else if (e.code === 'Digit1') { e.preventDefault(); selectColor('#ef4444'); }
+      else if (e.code === 'Digit2') { e.preventDefault(); selectColor('#2563eb'); }
+      else if (e.code === 'Digit3') { e.preventDefault(); selectColor('#f59e0b'); }
+    });
+    document.addEventListener('deck:slide', () => { strokes.length = 0; cur = null; redraw(); });
+
+    window.addEventListener('resize', resize);
+    let raf = 0;
+    window.addEventListener('scroll', () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => { raf = 0; if (strokes.length || cur) redraw(); });
+    }, { passive: true });
+    resize();
+  }
+</script>
