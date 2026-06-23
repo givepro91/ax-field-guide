@@ -1,0 +1,20 @@
+---
+interface Related { label: string; href: string }
+interface Props { category: string; categoryEn: string; stage: string; updated?: string; related?: Related[] }
+const { category, categoryEn, stage, updated, related = [] } = Astro.props;
+---
+
+<aside class="infobox" aria-label="문서 정보">
+  <div class="ib-h">문서 정보</div>
+  <dl>
+    <dt>분류</dt><dd>{category} ({categoryEn})</dd>
+    {updated && (<><dt>마지막 갱신</dt><dd class="mono">{updated}</dd></>)}
+    <dt>성숙도</dt><dd><span class="stage">{stage}</span></dd>
+    {related.length > 0 && (
+      <>
+        <dt>관련 문서</dt>
+        <dd>{related.map((r, i) => (<>{i > 0 && ' · '}<a href={r.href}>{r.label}</a></>))}</dd>
+      </>
+    )}
+  </dl>
+</aside>

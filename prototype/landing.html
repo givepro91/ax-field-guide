@@ -1,0 +1,124 @@
+<meta charset="utf-8" />
+<title>AX Field Guide</title>
+<style>
+  :root {
+    --bg:#f7f8fa; --card:#fff; --ink:#18181b; --sub:#52525b; --mute:#8a93a0;
+    --accent:#2563eb; --accent-ink:#1d4ed8; --accent-weak:#eef4ff; --accent-border:#cfe0ff;
+    --line:#e5e7eb; --chip:#edeff2; --ok:#047857; --ok-bg:#e7f8f1;
+    --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",system-ui,"Segoe UI",sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,"JetBrains Mono",monospace;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
+
+  .topbar { display:flex; align-items:center; gap:18px; padding:13px clamp(16px,4vw,32px); border-bottom:1px solid var(--line); }
+  .brand { font-family:var(--mono); font-size:12.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); }
+  .brand .dot { color:var(--accent); }
+  .topnav { margin-left:auto; display:flex; gap:18px; font-size:13.5px; }
+  .topnav a { color:var(--sub); }
+  .topnav a:hover { color:var(--accent-ink); text-decoration:none; }
+
+  .wrap { max-width:980px; margin:0 auto; padding:0 clamp(16px,4vw,32px); }
+
+  /* hero — calm, not a marketing blowout */
+  .hero { padding:64px 0 30px; }
+  .hero .kick { font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); }
+  .hero h1 { font-size:clamp(26px,3.6vw,38px); font-weight:800; letter-spacing:-.025em; line-height:1.28; margin:14px 0 0; max-width:20ch; }
+  .hero h1 .q { color:var(--accent-ink); }
+  .hero .sub { color:var(--sub); font-size:16px; max-width:60ch; margin:16px 0 0; }
+  .hero .cta { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+  .hero .cta a { display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:700; padding:10px 18px; border-radius:999px; }
+  .hero .cta .pri { background:var(--accent); color:#fff; box-shadow:0 1px 2px rgba(37,99,235,.25); }
+  .hero .cta .pri:hover { background:var(--accent-ink); text-decoration:none; }
+  .hero .cta .sec { background:#fff; color:var(--ink); border:1px solid var(--line); }
+  .hero .cta .sec:hover { border-color:var(--accent); color:var(--accent-ink); text-decoration:none; }
+
+  .sec-t { font-family:var(--mono); font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--mute); margin:40px 0 14px; }
+
+  /* entry cards */
+  .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  @media (max-width:640px){ .cards{ grid-template-columns:1fr; } }
+  .card { display:block; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; box-shadow:0 1px 2px rgba(16,24,40,.04); }
+  .card:hover { border-color:var(--accent-border); text-decoration:none; }
+  .card .c-h { display:flex; align-items:baseline; gap:9px; }
+  .card .c-h b { font-size:16px; color:var(--ink); }
+  .card .c-h .en { font-family:var(--mono); font-size:10.5px; color:var(--mute); text-transform:uppercase; letter-spacing:.05em; }
+  .card .c-h .cnt { margin-left:auto; font-family:var(--mono); font-size:10px; color:var(--mute); background:var(--chip); border-radius:6px; padding:1px 8px; }
+  .card p { margin:8px 0 0; font-size:13.5px; color:var(--sub); }
+
+  /* recent trends strip */
+  .trends { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .trends .t-h { display:flex; align-items:center; gap:8px; padding:13px 18px; border-bottom:1px solid var(--line); font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--mute); }
+  .trends .live { width:6px; height:6px; border-radius:999px; background:var(--ok); box-shadow:0 0 0 3px var(--ok-bg); }
+  .trends ul { list-style:none; margin:0; padding:6px 18px 14px; }
+  .trends li { padding:9px 0; border-bottom:1px solid var(--line); }
+  .trends li:last-child { border-bottom:0; }
+  .trends .meta { font-family:var(--mono); font-size:10px; color:var(--mute); }
+  .trends .meta .src { color:var(--accent-ink); }
+  .trends a.ti { display:block; font-size:14px; font-weight:600; color:var(--ink); margin-top:2px; }
+  .trends a.ti:hover { color:var(--accent-ink); }
+
+  footer { color:var(--mute); font-size:12px; font-family:var(--mono); padding:46px 0 60px; }
+  footer a { color:var(--mute); }
+</style>
+
+<header class="topbar">
+  <span class="brand">AX&nbsp;Field&nbsp;Guide<span class="dot">.</span></span>
+  <nav class="topnav">
+    <a href="index.html">개념</a>
+    <a href="index.html">Playbook</a>
+    <a href="index.html">Tools</a>
+    <a href="index.html">동향</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <p class="kick">공개 작업 노트 · 진행 중</p>
+    <h1>AI를 <span class="q">도입</span>하는 일이 아니라, 판단 구조를 <span class="q">다시 설계</span>하는 일.</h1>
+    <p class="sub">백엔드 출신 프로덕트 리드가 AX(AI Transformation)를 현장에서 배우며 정리하는 필드 가이드. 도구 자랑이 아니라, 문제를 어떻게 구조화하고 어디에 무엇을 붙였으며 무엇을 포기했는지를 남깁니다.</p>
+    <div class="cta">
+      <a class="pri" href="index.html">AX란 무엇인가 읽기 →</a>
+      <a class="sec" href="index.html">최근 동향 보기</a>
+    </div>
+  </section>
+
+  <p class="sec-t">어디서부터 볼까</p>
+  <div class="cards">
+    <a class="card" href="index.html">
+      <div class="c-h"><b>개념</b><span class="en">Concept</span><span class="cnt">2</span></div>
+      <p>AX를 내 언어로 정의하고, 어떤 기준으로 실무에 적용하는지.</p>
+    </a>
+    <a class="card" href="index.html">
+      <div class="c-h"><b>Playbook</b><span class="en">How-to</span><span class="cnt">2</span></div>
+      <p>승인 게이트·롤백·Human-in-the-loop 같은 반복 설계 패턴.</p>
+    </a>
+    <a class="card" href="index.html">
+      <div class="c-h"><b>Tools</b><span class="en">Reference</span><span class="cnt">2</span></div>
+      <p>Claude Code·Codex·MCP를 AX 관점에서 직접 써본 필드 리뷰.</p>
+    </a>
+    <a class="card" href="index.html">
+      <div class="c-h"><b>동향</b><span class="en">Trends</span><span class="cnt">자동</span></div>
+      <p>매일 자동 수집·요약하는 AX 기술 동향.</p>
+    </a>
+  </div>
+
+  <p class="sec-t">최근 동향</p>
+  <section class="trends">
+    <div class="t-h"><span class="live"></span> 매일 자동 수집 (샘플)</div>
+    <ul>
+      <li><div class="meta"><span class="src">Anthropic</span> · 06-22</div><a class="ti" href="index.html">에이전트 평가·신뢰성 관련 업데이트</a></li>
+      <li><div class="meta"><span class="src">GitHub</span> · 06-21</div><a class="ti" href="index.html">MCP 서버 생태계 주요 릴리스</a></li>
+      <li><div class="meta"><span class="src">웹</span> · 06-20</div><a class="ti" href="index.html">코딩 에이전트 워크플로우 비교 글</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    AX Field Guide — 판단 기준을 쌓아가는 작업 노트. ·
+    <a href="index.html">읽기 시작 →</a>
+  </footer>
+</div>

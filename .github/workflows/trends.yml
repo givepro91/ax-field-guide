@@ -1,0 +1,40 @@
+name: collect-trends
+
+# 매일 AX 동향을 수집해 content/trends/ 에 커밋한다 (무료 — 피드 발췌 사용, LLM/시크릿 불필요).
+# 활성화 전제: (1) 이 레포가 GitHub 에 push 되어 있을 것
+#              (2) (배포) Vercel 연결 시 push 마다 자동 재배포
+# 옵션(유료): 한국어 LLM 요약을 원하면 Secrets 에 ANTHROPIC_API_KEY 추가 후
+#   run 을 `TRENDS_SUMMARIZE=1 node scripts/collect-trends.mjs` + env 로 키 주입.
+on:
+  schedule:
+    - cron: '0 0 * * *' # 매일 00:00 UTC = 09:00 KST
+  workflow_dispatch: {} # 수동 실행 버튼
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-trends
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Collect (무료 — LLM 미사용)
+        run: node scripts/collect-trends.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "trends-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -n "$(git status --porcelain content/trends)" ]; then
+            git add content/trends
+            git commit -m "chore(trends): $(date -u +%Y-%m-%d) 자동 수집"
+            git push
+          else
+            echo "변경 없음 — 커밋 생략"
+          fi

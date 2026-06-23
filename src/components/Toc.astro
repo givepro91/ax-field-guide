@@ -1,0 +1,34 @@
+---
+interface Heading { depth: number; slug: string; text: string }
+interface Props { headings?: Heading[] }
+const { headings = [] } = Astro.props;
+const items = headings.filter((h) => h.depth === 2);
+---
+
+{items.length > 0 && <p class="toc-h">이 문서</p>}
+{items.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
+
+<script>
+  const links = Array.from(document.querySelectorAll('.toc a')) as HTMLAnchorElement[];
+  const map: Record<string, HTMLAnchorElement> = {};
+  links.forEach((a) => {
+    const id = (a.getAttribute('href') || '').slice(1);
+    const el = id && document.getElementById(id);
+    if (el) map[id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(
+      (es) => {
+        es.forEach((en) => {
+          if (en.isIntersecting) {
+            links.forEach((l) => l.classList.remove('active'));
+            const a = map[en.target.id];
+            if (a) a.classList.add('active');
+          }
+        });
+      },
+      { rootMargin: '-68px 0px -65% 0px' },
+    );
+    Object.keys(map).forEach((id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+  }
+</script>

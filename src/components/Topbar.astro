@@ -1,0 +1,25 @@
+---
+interface Props { crumbCategory?: string; crumbTitle?: string; present?: boolean }
+const { crumbCategory, crumbTitle, present = false } = Astro.props;
+---
+
+<header class="topbar">
+  <a class="brand" href="/">AX&nbsp;Field&nbsp;Guide<span class="dot">.</span></a>
+  {crumbTitle && (
+    <span class="crumb">
+      {crumbCategory && <>{crumbCategory} / </>}<b>{crumbTitle}</b>
+    </span>
+  )}
+  <label class="search">
+    <span class="mono">⌕</span>
+    <input id="nav-search" type="search" placeholder="문서 검색…" aria-label="문서 검색" />
+  </label>
+  {present && (
+    <button class="btn-present" id="present-btn" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="13" rx="2" /><path d="M12 17v3M8 20h8" />
+      </svg>
+      프레젠테이션
+    </button>
+  )}
+</header>

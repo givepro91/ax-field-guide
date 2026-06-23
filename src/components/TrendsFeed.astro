@@ -1,0 +1,20 @@
+---
+import trends from '../../content/trends/index.json';
+import type { TrendItem } from '../nav';
+interface Props { limit?: number }
+const { limit = 3 } = Astro.props;
+const items = ((trends.items || []) as TrendItem[]).slice(0, limit);
+---
+
+<section class="feed" aria-label="최근 동향">
+  <p class="feed-h"><span class="live"></span> 최근 동향</p>
+  <ul>
+    {items.map((it) => (
+      <li>
+        <div class="ft-meta"><span class="ft-src">{it.source}</span><span>·</span><time>{it.date}</time></div>
+        <a class="ft-title" href={it.url}>{it.title}</a>
+      </li>
+    ))}
+  </ul>
+  <p class="note"><a href="/trends">동향 전체 보기 →</a></p>
+</section>

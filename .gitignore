@@ -1,0 +1,19 @@
+# 의존성 & 빌드 산출물
+node_modules/
+dist/
+.astro/
+
+# OMC 로컬 상태
+.omc/
+
+# OS / 에디터
+.DS_Store
+
+# 일시 캡처 (전역 gitignore 에도 등록돼 있음)
+.playwright-mcp/
+.cc-shots/
+
+# 환경변수 / 시크릿
+.env
+.env.*
+!.env.example

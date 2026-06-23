@@ -1,0 +1,12 @@
+{
+  "maxPerSource": 5,
+  "keepInIndex": 40,
+  "_note": "URL은 시간민감 — 첫 실행(--dry) 결과로 동작 여부 확인하고 깨진 소스는 교체/비활성화. type: atom|rss 둘 다 같은 파서가 처리.",
+  "sources": [
+    { "id": "anthropic-sdk", "label": "Anthropic", "category": "Anthropic / Claude", "type": "atom", "url": "https://github.com/anthropics/anthropic-sdk-python/releases.atom", "enabled": true },
+    { "id": "claude-code", "label": "Claude Code", "category": "Anthropic / Claude", "type": "atom", "url": "https://github.com/anthropics/claude-code/releases.atom", "enabled": true },
+    { "id": "openai-news", "label": "OpenAI", "category": "OpenAI · 모델사", "type": "rss", "url": "https://openai.com/news/rss.xml", "enabled": true },
+    { "id": "mcp-servers", "label": "MCP Servers", "category": "GitHub · MCP", "type": "atom", "url": "https://github.com/modelcontextprotocol/servers/releases.atom", "enabled": true },
+    { "id": "simonw", "label": "Simon Willison", "category": "AX · 블로그", "type": "atom", "url": "https://simonwillison.net/atom/everything/", "enabled": true }
+  ]
+}

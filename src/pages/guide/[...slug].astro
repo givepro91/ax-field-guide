@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Topbar from '../../components/Topbar.astro';
+import SideNav from '../../components/SideNav.astro';
+import Toc from '../../components/Toc.astro';
+import Infobox from '../../components/Infobox.astro';
+import TrendsFeed from '../../components/TrendsFeed.astro';
+import Deck from '../../components/Deck.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('guide');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry, entries } }));
+}
+
+const { entry, entries } = Astro.props;
+const { Content, headings } = await render(entry);
+const d = entry.data;
+---
+
+<Base title={`${d.title} — AX Field Guide`}>
+  <Topbar crumbCategory={d.category} crumbTitle={d.title} present={true} />
+  <div class="shell">
+    <SideNav entries={entries} activeId={entry.id} />
+    <main class="main">
+      <p class="kick">{d.category} · {d.categoryEn}</p>
+      <h1>{d.title}</h1>
+      {d.lead && <p class="lead">{d.lead}</p>}
+      <Infobox category={d.category} categoryEn={d.categoryEn} stage={d.stage} updated={d.updated} related={d.related} />
+      <div class="prose">
+        <Content />
+      </div>
+    </main>
+    <aside class="toc" aria-label="이 문서 차례">
+      <Toc headings={headings} />
+      <TrendsFeed limit={3} />
+    </aside>
+  </div>
+  <Deck slides={d.slides} />
+</Base>

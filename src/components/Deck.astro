@@ -1,0 +1,72 @@
+---
+interface Slide { kick?: string; title: string; body?: string; bullets?: string[]; cover?: boolean }
+interface Props { slides?: Slide[] }
+const { slides = [] } = Astro.props;
+---
+
+{slides.length > 0 && (
+  <div class="deck" id="deck" role="dialog" aria-modal="true" aria-label="프레젠테이션" tabindex="-1">
+    <div class="deck-bar"><i id="deck-prog"></i></div>
+    <div class="deck-stage" id="deck-stage">
+      {slides.map((s) => (
+        <section class={`slide${s.cover ? ' cover' : ''}`}>
+          {s.kick && <p class="s-kick">{s.kick}</p>}
+          <h2>{s.title}</h2>
+          {s.body && <p>{s.body}</p>}
+          {s.bullets && s.bullets.length > 0 && (
+            <ul>{s.bullets.map((b) => (<li><span class="n">·</span> {b}</li>))}</ul>
+          )}
+        </section>
+      ))}
+    </div>
+    <div class="deck-foot">
+      <button class="exit" id="exit-btn">✕ 닫기 (Esc)</button>
+      <button id="prev-btn">← 이전</button>
+      <span class="count" id="deck-count">1 / {slides.length}</span>
+      <button id="next-btn">다음 →</button>
+      <span class="hint">← → 이동 · F 전체화면 · Esc 종료</span>
+    </div>
+  </div>
+)}
+
+<script>
+  const deck = document.getElementById('deck');
+  if (deck) {
+    const stage = document.getElementById('deck-stage');
+    const slides = Array.from(deck.querySelectorAll('.slide'));
+    const count = document.getElementById('deck-count');
+    const prog = document.getElementById('deck-prog') as HTMLElement | null;
+    let i = 0;
+    const show = (n: number) => {
+      i = Math.max(0, Math.min(slides.length - 1, n));
+      slides.forEach((s, k) => s.classList.toggle('on', k === i));
+      if (count) count.textContent = `${i + 1} / ${slides.length}`;
+      if (prog) prog.style.width = `${((i + 1) / slides.length) * 100}%`;
+    };
+    const bg = () => Array.from(document.querySelectorAll('.topbar, .shell')) as HTMLElement[];
+    const open = () => {
+      deck.classList.add('open'); document.body.classList.add('presenting');
+      bg().forEach((el) => (el.inert = true)); // 배경 비활성(aria-modal 일관)
+      show(0); deck.focus();
+    };
+    const close = () => {
+      deck.classList.remove('open'); document.body.classList.remove('presenting');
+      bg().forEach((el) => (el.inert = false));
+      if (document.fullscreenElement) document.exitFullscreen?.();
+      (document.getElementById('present-btn') as HTMLElement | null)?.focus(); // 트리거로 포커스 복귀
+    };
+    const fs = () => { if (!document.fullscreenElement) deck.requestFullscreen?.(); else document.exitFullscreen?.(); };
+    document.getElementById('present-btn')?.addEventListener('click', open);
+    document.getElementById('exit-btn')?.addEventListener('click', close);
+    document.getElementById('next-btn')?.addEventListener('click', (e) => { e.stopPropagation(); show(i + 1); });
+    document.getElementById('prev-btn')?.addEventListener('click', (e) => { e.stopPropagation(); show(i - 1); });
+    stage?.addEventListener('click', () => { if (i >= slides.length - 1) close(); else show(i + 1); });
+    document.addEventListener('keydown', (e) => {
+      if (!deck.classList.contains('open')) return;
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(i + 1); }
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+      else if (e.key === 'Escape') close();
+      else if (e.key === 'f' || e.key === 'F') fs();
+    });
+  }
+</script>

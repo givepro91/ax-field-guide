@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Topbar from '../../components/Topbar.astro';
+import SideNav from '../../components/SideNav.astro';
+import trends from '../../../content/trends/index.json';
+import type { TrendItem } from '../../nav';
+const entries = await getCollection('guide');
+const items = (trends.items || []) as TrendItem[];
+---
+
+<Base title="동향 — AX Field Guide">
+  <Topbar crumbTitle="동향" />
+  <div class="shell two">
+    <SideNav entries={entries} />
+    <main class="main">
+      <p class="kick">동향 · Trends</p>
+      <h1>최근 AX 동향</h1>
+      <p class="lead">매일 자동 수집·요약하는 AX 기술 동향. 출처 링크와 요약만 싣고, 외부 공개 기사만 다룹니다.</p>
+      <section class="trends" style="margin-top:18px">
+        <div class="t-h"><span class="live"></span> 매일 자동 수집</div>
+        <ul>
+          {items.map((it) => (
+            <li>
+              <div class="meta"><span class="src">{it.source}</span> · {it.date}{it.category ? ` · ${it.category}` : ''}</div>
+              <a class="ti" href={it.url}>{it.title}</a>
+              {it.summary && <p class="summary">{it.summary}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </main>
+  </div>
+</Base>
