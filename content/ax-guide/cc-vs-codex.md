@@ -2,11 +2,10 @@
 title: Claude Code vs Codex — 무엇을 언제
 category: 도구·기법
 categoryEn: Craft
-stage: 초안 — 실사용 채우는 중
+stage: 탐색 중
 updated: "2026-06-23"
 order: 4
-draft: true
-lead: 둘 중 하나를 고르는 글이 아니다. 어떤 작업 성격에 무엇이 더 맞는지, 직접 써본 뒤에 가른다.
+lead: 둘 중 하나를 고르는 글이 아니다. 써보니 우열보다 자리가 갈렸다 — 사람 없이 정기적으로 도는 일과, 곁에서 빠르게 주고받는 일.
 related:
   - label: Claude Code를 AX 관점에서 쓰는 법
     href: "/guide/claude-code-ax"
@@ -15,46 +14,62 @@ related:
 slides:
   - kick: AX Field Guide · 도구·기법
     title: Claude Code vs Codex
-    body: 승자가 아니라 작업 성격별 적합도
+    body: 승자가 아니라, 작업 성격별 자리
     cover: true
-  - kick: 원칙
-    title: 안 써보고 비교하지 않는다
-    body: 작업 성격 × 도구의 적합도는 둘 다 같은 일에 써본 뒤에만 적는다.
-  - kick: 채우는 중
-    title: 비교축은 직접
-    body: 무엇을 기준으로 가를지부터 경험에서 나온다.
+  - kick: 테제
+    title: 우열보다 자리다
+    body: 어느 게 더 똑똑한가가 아니라, 어떤 작업 성격에 무엇이 맞았나.
+  - kick: 가른 축
+    title: 사람이 얼마나 끼나
+    body: 사람 없이 정기적으로 도는 일 ↔ 곁에서 빠르게 주고받는 일.
+  - kick: 분담
+    title: 러너 vs 협업
+    bullets:
+      - 무인 정기 작업 → Codex 러너
+      - 개발·판단이 끼는 일 → 곁에서 모는 도구
+  - kick: 솔직히
+    title: 정밀 비교는 아직
+    body: 같은 일을 둘 다에 시켜 우열을 잰 건 아니다. 자리가 갈려 비교할 일이 적었다.
+    cover: true
 ---
 
-이 글은 **초안**이며, 두 도구 리뷰([Claude Code](/guide/claude-code-ax) · [Codex](/guide/codex-ax))가 쌓인 뒤에 쓴다. 이 프로젝트가 가장 피하려는 글이 안 써보고 쓰는 비교글이라([what-is-ax](/guide/what-is-ax)), 비교는 둘 다 같은 작업에 직접 붙여본 뒤로 미룬다.
+도구 두 개를 두고 "어느 게 낫냐"는 질문을 자주 받지만, 나는 그 질문이 대개 틀을 잘못 잡았다고 본다. [Claude Code](/guide/claude-code-ax)와 [Codex](/guide/codex-ax)를 둘 다 쓰면서 느낀 건, 우열을 가리기 전에 **자리가 먼저 갈렸다**는 점이다. 그래서 이 글은 둘 중 하나를 고르는 글이 아니다.
 
-비교의 목적은 승자를 가리는 게 아니다. 같은 일을 두 도구에 시켜보고, **어떤 작업 성격에서 무엇이 더 맞았는지**를 남기는 것이다. 그래서 결론(어느 게 낫다)보다 축(무엇을 기준으로 가르나)이 먼저다.
+<blockquote class="thesis">어느 도구가 더 똑똑한가가 아니라, 어떤 작업 성격에 무엇이 맞았는가. 써보니 둘은 경쟁하기보다 다른 자리에 앉았다.</blockquote>
+
+## 무엇이 자리를 갈랐나
+
+가른 축은 성능이 아니라 **사람이 얼마나 끼느냐**였다. 한쪽 끝에는 사람 없이 정해진 시각에 도는 일이 있고, 다른 끝에는 사람과 빠르게 주고받으며 그때그때 판단이 끼는 일이 있다. 이 축 위에서 두 도구가 자연스럽게 다른 자리에 놓였다.
 
 <figure class="fig">
-  <div class="dia">
-    <svg viewBox="0 0 480 200" role="img" aria-label="작업 성격을 행으로, 두 도구를 열로 둔 빈 비교표 틀">
-      <rect x="20" y="30" width="180" height="34" rx="6" style="fill:#eef4ff;stroke:#cfe0ff"/>
-      <text class="nsub" x="110" y="51" text-anchor="middle">작업 성격</text>
-      <rect x="206" y="30" width="125" height="34" rx="6" style="fill:#fff;stroke:#cfe0ff"/>
-      <text class="ntext" x="268" y="51" text-anchor="middle">Claude Code</text>
-      <rect x="337" y="30" width="125" height="34" rx="6" style="fill:#fff;stroke:#cfe0ff"/>
-      <text class="ntext" x="399" y="51" text-anchor="middle">Codex</text>
-      <rect x="20" y="68" width="180" height="38" rx="6" style="fill:#fbfcff;stroke:#e5e7eb"/>
-      <text class="nsub" x="110" y="91" text-anchor="middle">긴 다단계 작업</text>
-      <rect x="20" y="110" width="180" height="38" rx="6" style="fill:#fbfcff;stroke:#e5e7eb"/>
-      <text class="nsub" x="110" y="133" text-anchor="middle">짧은 단발 수정</text>
-      <rect x="20" y="152" width="180" height="38" rx="6" style="fill:#fbfcff;stroke:#e5e7eb"/>
-      <text class="nsub" x="110" y="175" text-anchor="middle">도구·데이터 연결</text>
-      <text class="ctr" x="335" y="133" text-anchor="middle">— 채우는 중 —</text>
-    </svg>
+  <div class="compare">
+    <div class="cmp-card">
+      <div class="cmp-h">무인 정기 → 러너</div>
+      <ul><li>사람이 매번 안 본다</li><li>가드레일·검증이 본체</li><li>안전하게 도는 게 관건</li><li>나는 여기에 Codex</li></ul>
+    </div>
+    <div class="cmp-arrow">↔</div>
+    <div class="cmp-card is-ax">
+      <div class="cmp-h">개발·판단 → 협업</div>
+      <ul><li>사람과 빠르게 주고받는다</li><li>위임 경계·승인이 관건</li><li>맥락을 함께 쌓는 게 중요</li><li>나는 여기에 Claude Code</li></ul>
+    </div>
   </div>
-  <figcaption>그림 1 · 작업 성격 × 도구 — 채워 갈 비교 틀 (표)</figcaption>
+  <figcaption>그림 1 · 사람 개입 빈도가 자리를 갈랐다 (분담)</figcaption>
 </figure>
 
-<blockquote class="draft-note"><b>채울 자리.</b> 같은 작업을 두 도구에 시켜본 결과가 행마다 들어간다. 비교축(긴 작업·단발 수정·도구 연결·승인 친화성 등)도 경험에서 다시 정한다.</blockquote>
+[Codex 글](/guide/codex-ax)에서 쓴 무인 러너 — 매주 같은 시각에 자료를 읽고 초안을 만들고 검증을 통과하면 커밋하는 — 가 왼쪽이다. 거기서 중요한 건 모델이 얼마나 똑똑한가가 아니라 사람이 안 보는 동안 안전하게 도느냐였다. 오른쪽은 [Claude Code 글](/guide/claude-code-ax)에서 쓴 협업 — 조사는 위임하고 결정은 내가 쥐며 맥락을 함께 쌓아가는 — 이다. 거기선 빠른 주고받기와 위임 경계가 관건이었다.
+
+## 솔직히, 정밀 비교는 아직
+
+여기서 글을 멋지게 닫고 싶지만 정직하게 적는다. 나는 **같은 작업을 두 도구에 똑같이 시켜 우열을 잰 적이 없다.** 자리가 일찍 갈려서 그럴 일이 적었기 때문이다. 무인으로 돌릴 일은 한쪽에, 곁에서 개발할 일은 다른 쪽에 두다 보니 정면 비교를 할 동기가 없었다.
+
+그래서 "어느 게 코드를 더 잘 짜나", "복잡한 리팩터링은 어느 쪽이 나은가" 같은 질문에는 아직 근거 있는 답이 없다. 이건 [이 프로젝트가 피하려는 글](/guide/what-is-ax) — 안 해보고 비교하는 글 — 이 되지 않으려는 선이기도 하다. 같은 일을 양쪽에 시켜 보는 실험을 따로 해야 채울 수 있는 자리로 남겨 둔다.
+
+지금 단계에서 말할 수 있는 한 줄은 이것뿐이다. **"둘 중 뭘 쓸까"보다 "이 일에 사람이 얼마나 껴야 하나"를 먼저 물으면, 도구는 대개 거기서 정해진다.**
 
 <section class="log" aria-label="변경 로그">
   <div class="lg-h">변경 로그</div>
   <ul>
-    <li><time>2026-06-23</time><span>구조·프레임 초안. 두 도구 리뷰가 쌓인 뒤 작성 (성숙도: 초안)</span></li>
+    <li><time>2026-06-23</time><span>초안에서 발행. 사람 개입 축으로 본 자리 분담 정리. 정밀 우열 비교는 보류(미실험) (성숙도: 탐색 중)</span></li>
+    <li><time>예정</time><span>같은 작업을 양쪽에 시킨 비교 실험 후 우열·세부 보강</span></li>
   </ul>
 </section>

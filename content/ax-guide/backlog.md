@@ -8,7 +8,7 @@
 
 **개념·관점** — [AX란 무엇인가](/guide/what-is-ax) · [AX를 맡으면 실제로 무엇을 하나](/guide/what-ax-work-looks-like)(5계층 행위 허브) · [어떤 업무 루프를 먼저 고를까](/guide/choosing-loops) · [AI 출력을 어디까지 믿을 것인가](/guide/trusting-output) · [RAG와 Agent Workflow의 차이](/guide/rag-vs-agent)
 
-**도구·기법** — [에이전트를 모는 법](/guide/driving-agents)(context·harness·loop·Ralph 사다리)
+**도구·기법** — [에이전트를 모는 법](/guide/driving-agents)(사다리) · [Claude Code · AX 관점](/guide/claude-code-ax) · [Codex · AX 관점](/guide/codex-ax) · [Claude Code vs Codex](/guide/cc-vs-codex) · [MCP는 AX에서 무엇인가](/guide/mcp-in-ax)
 
 **패턴·플레이북** — [AI에 승인 게이트가 필요한 이유](/guide/approval-gates) · [Human-in-the-loop 패턴](/guide/human-in-the-loop) · [AI 자동화의 audit trail 설계](/guide/audit-trail) · [운영 자동화는 언제 폐기하나](/guide/retiring-automation)
 
@@ -21,13 +21,13 @@
 
 ## 2. 도구 필드 리뷰
 
-AX 관점 = 역할·한계·언제 쓰나. 성능 비교가 아니라 어떤 일에 무엇을 붙였더니 어땠는지. **구조·프레임은 잡았고, 실사용 경험을 채우는 중**(직접 써본 뒤에만 발행 — prod 제외 상태).
+AX 관점 = 역할·한계·언제 쓰나. 성능 비교가 아니라 어떤 일에 무엇을 붙였더니 어땠는지.
 
-- **Claude Code를 AX 관점에서 쓰는 법** — `초안(채우는 중)` → [claude-code-ax](/guide/claude-code-ax)
-- **Codex를 AX 관점에서 쓰는 법** — `초안(채우는 중)` → [codex-ax](/guide/codex-ax)
-- **Claude Code vs Codex** — `초안(채우는 중)` → [cc-vs-codex](/guide/cc-vs-codex). 위 두 글이 채워진 뒤 비교.
-- **Cursor / Claude Code / Codex의 역할 분리** — `초안(채우는 중)` → [tool-roles](/guide/tool-roles)
-- **MCP는 AX에서 어떤 의미가 있는가** — `초안(채우는 중)` → [mcp-in-ax](/guide/mcp-in-ax). 빠르게 바뀌는 세부는 쓸 때 1차 소스 재확인.
+- **Claude Code를 AX 관점에서 쓰는 법** — `발행됨` → [claude-code-ax](/guide/claude-code-ax) (운영 관점·위임 경계·게이트)
+- **Codex를 AX 관점에서 쓰는 법** — `발행됨` → [codex-ax](/guide/codex-ax) (무인 러너·가드레일)
+- **Claude Code vs Codex** — `발행됨(부분)` → [cc-vs-codex](/guide/cc-vs-codex). 사람 개입 축의 자리 분담까지. 같은 작업 양쪽 비교 실험은 미실행 → 우열·세부 보강 예정.
+- **Cursor / Claude Code / Codex의 역할 분리** — `폐기` Cursor 미사용으로 보류. CC·Codex 분담은 위 [cc-vs-codex](/guide/cc-vs-codex)가 다룸. Cursor를 실제로 쓰게 되면 그때 다시.
+- **MCP는 AX에서 어떤 의미가 있는가** — `발행됨(부분)` → [mcp-in-ax](/guide/mcp-in-ax). 연결 표준의 값 + 끊김·폴백 문제의식까지. MCP 심화 운영 경험은 더 쌓은 뒤 보강.
 
 ## 3. 패턴·플레이북
 

@@ -20,7 +20,7 @@ export interface NavGroup {
 // 해당 글이 실제로 생기면 그때 추가한다(카테고리는 글에서 자란다).
 const GROUPS: { cat: string; catEn: string; planned: string[] }[] = [
   { cat: '개념·관점', catEn: 'Concept', planned: [] },
-  { cat: '도구·기법', catEn: 'Craft', planned: ['Claude Code·Codex 필드 리뷰 (작성 중)'] },
+  { cat: '도구·기법', catEn: 'Craft', planned: [] },
   { cat: '패턴·플레이북', catEn: 'Patterns', planned: ['익명화 케이스·안티패턴 기록'] },
 ];
 
