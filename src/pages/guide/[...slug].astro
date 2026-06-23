@@ -5,11 +5,11 @@ import Topbar from '../../components/Topbar.astro';
 import SideNav from '../../components/SideNav.astro';
 import Toc from '../../components/Toc.astro';
 import Infobox from '../../components/Infobox.astro';
-import TrendsFeed from '../../components/TrendsFeed.astro';
 import Deck from '../../components/Deck.astro';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('guide');
+  // draft 글은 prod 빌드(공개)에서 제외, dev 에서는 보여 작성자가 채운다.
+  const entries = await getCollection('guide', ({ data }) => (import.meta.env.PROD ? !data.draft : true));
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry, entries } }));
 }
 
@@ -26,14 +26,13 @@ const d = entry.data;
       <p class="kick">{d.category} · {d.categoryEn}</p>
       <h1>{d.title}</h1>
       {d.lead && <p class="lead">{d.lead}</p>}
-      <Infobox category={d.category} categoryEn={d.categoryEn} stage={d.stage} updated={d.updated} related={d.related} />
       <div class="prose">
         <Content />
       </div>
     </main>
-    <aside class="toc" aria-label="이 문서 차례">
-      <Toc headings={headings} />
-      <TrendsFeed limit={3} />
+    <aside class="toc" aria-label="문서 정보·차례">
+      <Infobox category={d.category} categoryEn={d.categoryEn} stage={d.stage} updated={d.updated} related={d.related} />
+      <div class="doc-toc"><Toc headings={headings} /></div>
     </aside>
   </div>
   <Deck slides={d.slides} />

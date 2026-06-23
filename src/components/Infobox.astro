@@ -4,7 +4,7 @@ interface Props { category: string; categoryEn: string; stage: string; updated?:
 const { category, categoryEn, stage, updated, related = [] } = Astro.props;
 ---
 
-<aside class="infobox" aria-label="문서 정보">
+<section class="infobox" aria-label="문서 정보">
   <div class="ib-h">문서 정보</div>
   <dl>
     <dt>분류</dt><dd>{category} ({categoryEn})</dd>
@@ -17,4 +17,4 @@ const { category, categoryEn, stage, updated, related = [] } = Astro.props;
       </>
     )}
   </dl>
-</aside>
+</section>

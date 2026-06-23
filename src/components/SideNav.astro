@@ -7,8 +7,10 @@ const activeHref = activeId ? `/guide/${activeId}` : '';
 ---
 
 <nav class="sidenav" id="sidenav" aria-label="문서 색인">
-  {groups.map((g) => (
-    <details open>
+  {groups.map((g) => {
+    const isActiveGroup = g.articles.some((a) => a.href === activeHref);
+    return (
+    <details open={isActiveGroup}>
       <summary>
         <span class="chev"></span>
         <span class="grp-t">{g.cat}{g.catEn ? ` · ${g.catEn}` : ''}</span>
@@ -17,7 +19,7 @@ const activeHref = activeId ? `/guide/${activeId}` : '';
       <ul>
         {g.articles.map((a) => (
           <li class={a.href === activeHref ? 'active' : ''}>
-            <a href={a.href}><span class="ti">{a.title}</span></a>
+            <a href={a.href}><span class="ti">{a.title}</span>{a.draft && <span class="badge draft">draft</span>}</a>
           </li>
         ))}
         {g.planned.map((p) => (
@@ -26,15 +28,15 @@ const activeHref = activeId ? `/guide/${activeId}` : '';
         {g.articles.length === 0 && g.planned.length === 0 && <li class="empty">아직 없음</li>}
       </ul>
     </details>
-  ))}
-  <details open>
-    <summary><span class="chev"></span><span class="grp-t">동향 · Trends</span><span class="cnt">자동</span></summary>
-    <ul><li><a href="/trends"><span class="ti">최근 동향 보기</span></a></li></ul>
-  </details>
+    );
+  })}
   <p class="noresult" id="noresult" aria-live="polite">검색 결과 없음</p>
 </nav>
 
 <script>
+  // 긴 색인에서 현재 글이 보이도록 자동 스크롤(닫힌 그룹 밖이면 무해).
+  document.querySelector('.sidenav li.active')?.scrollIntoView({ block: 'nearest' });
+
   const box = document.getElementById('nav-search') as HTMLInputElement | null;
   if (box) {
     const groups = Array.from(document.querySelectorAll('#sidenav details')) as HTMLDetailsElement[];

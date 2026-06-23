@@ -9,26 +9,29 @@ const items = headings.filter((h) => h.depth === 2);
 {items.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
 
 <script>
+  // 스크롤 위치 기반 scrollspy. IntersectionObserver 의 35% 밴드 방식은 짧은 마지막 섹션이
+  // 영영 밴드에 못 들어와 active 가 안 잡혔다 → "상단 80px 를 지난 마지막 H2" + "바닥 도달 시 마지막" 으로 교체.
   const links = Array.from(document.querySelectorAll('.toc a')) as HTMLAnchorElement[];
-  const map: Record<string, HTMLAnchorElement> = {};
-  links.forEach((a) => {
-    const id = (a.getAttribute('href') || '').slice(1);
-    const el = id && document.getElementById(id);
-    if (el) map[id] = a;
-  });
-  if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver(
-      (es) => {
-        es.forEach((en) => {
-          if (en.isIntersecting) {
-            links.forEach((l) => l.classList.remove('active'));
-            const a = map[en.target.id];
-            if (a) a.classList.add('active');
-          }
-        });
-      },
-      { rootMargin: '-68px 0px -65% 0px' },
-    );
-    Object.keys(map).forEach((id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+  const sections = links
+    .map((a) => ({ a, el: document.getElementById((a.getAttribute('href') || '').slice(1)) }))
+    .filter((s): s is { a: HTMLAnchorElement; el: HTMLElement } => !!s.el);
+
+  if (sections.length) {
+    const setActive = (a: HTMLAnchorElement) => links.forEach((l) => l.classList.toggle('active', l === a));
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (atBottom) { setActive(sections[sections.length - 1].a); return; }
+      let current = sections[0];
+      for (const s of sections) {
+        if (s.el.getBoundingClientRect().top <= 80) current = s;
+        else break;
+      }
+      setActive(current.a);
+    };
+    window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+    update();
   }
 </script>

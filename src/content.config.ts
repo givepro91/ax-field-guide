@@ -8,7 +8,7 @@ const guide = defineCollection({
   loader: glob({ pattern: ['*.md', '!README.md', '!backlog.md'], base: './content/ax-guide' }),
   schema: z.object({
     title: z.string(),
-    category: z.string().default('개념'),
+    category: z.string().default('개념·관점'),
     categoryEn: z.string().default('Concept'),
     stage: z.string().default('탐색 중'),
     updated: z.string().optional(),
