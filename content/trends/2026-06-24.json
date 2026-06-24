@@ -1,0 +1,92 @@
+{
+  "date": "2026-06-24",
+  "items": [
+    {
+      "date": "2026-06-24",
+      "title": "v2.1.187",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.187",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-23T21:03:48Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added sandbox.credentials setting to block sandboxed commands from reading credential files and secret environment variables Added org-configured model restrictions…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-24",
+      "title": "Helping build shared standards for advanced AI",
+      "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 23 Jun 2026 13:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
+      "tags": [
+        "eval",
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-24",
+      "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+      "url": "https://openai.com/index/gpt-5-immunology-mystery",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 23 Jun 2026 17:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-24",
+      "title": "How Omio is building the future of conversational travel",
+      "url": "https://openai.com/index/omio",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 23 Jun 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Discover how Omio uses OpenAI to power conversational travel experiences, accelerate product development, and transform into an AI-native company.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-24",
+      "title": "datasette 1.0a35",
+      "url": "https://simonwillison.net/2026/Jun/23/datasette/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-23T21:34:37+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: datasette 1.0a35 I'll write more about this one tomorrow, but it's a big release. Three highlights from the release notes: New \"Create table\" interface in the database…",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-24",
+      "title": "OPFS + Pyodide test harness",
+      "url": "https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-23T18:58:54+00:00",
+      "category": "AX · 블로그",
+      "summary": "Tool: OPFS + Pyodide test harness I've been pondering if Datasette Lite - the Python Datasette application run entirely in the browser using Pyodide and WebAssembly - might be…",
+      "tags": [
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
