@@ -14,29 +14,60 @@ related:
   - label: AI 자동화의 audit trail 설계
     href: "/guide/audit-trail"
 slides:
-  - kick: AX Field Guide · 도구·기법
+  - layout: cover
+    kick: AX Field Guide · 도구·기법
     title: Codex · AX 관점
-    body: 코딩 모델이 아니라, 사람 없이 도는 러너로 본다면
-    cover: true
-  - kick: 테제
+    body: 코딩 모델이 아니라, 사람 없이 도는 무인 러너로 본다면
+  - layout: thesis
+    kick: 테제
     title: 무인이면 가드레일이 본체다
-    body: 사람이 매번 보지 않으니, 무엇을 못 하게 막고 무엇을 남길지가 코드보다 중요해진다.
-  - kick: 실사용
-    title: 정기 작업을 무인으로
-    body: 매주 같은 시각, 자료를 읽고 초안을 만들고 검증 통과 시에만 커밋하는 에이전트로.
-  - kick: 가드레일
+    body: 사람이 매번 보지 않으니, 무엇을 못 하게 막고 무엇을 견디게 하고 무엇을 남길지가 모델의 똑똑함보다 중요해진다.
+  - layout: flow
+    kick: 실사용
+    title: 정기 작업을 사람 없이 돌린다
+    steps:
+      - label: 정기 실행 (cron)
+        note: 매주 같은 시각, 사람 없이
+      - label: 자료 읽기 · 초안 생성
+        note: 정해진 작업 수행
+      - label: 검증 게이트
+        note: 통과하면 반영, 실패하면 기록
+      - label: 반영 또는 기록
+        note: 못 하면 멈추지 말고 무엇을 못 했는지 파일에 남긴다
+    note: 핵심은 그 과정에 사람이 끼지 않는다는 점이다.
+  - layout: stack
+    kick: 가드레일
     title: 막고 · 견디고 · 남긴다
-    bullets:
-      - 못 할 땐 멈추지 말고 한계를 기록
-      - 공개 안전 룰(시크릿·개인정보 스캔)
-      - 검증 통과 후에만 반영
-  - kick: 분담
+    layers:
+      - label: 막는다
+        note: 공개 안전 룰 — 시크릿·개인정보가 산출물에 섞이지 않게 스캔
+      - label: 견딘다
+        note: 외부 접근 실패·빈 자료 — 멈추지 말고 무엇을 못 했는지 남기고 진행
+      - label: 남긴다
+        note: 검증 통과한 것만 반영, 무엇을 왜 바꿨는지 기록 (audit trail)
+    note: 사람이라면 자연히 했을 판단을 명시적으로 적어 줘야 한다.
+  - layout: compare
+    kick: 분담
     title: 무인 정기 vs 곁에서 모는
-    body: 정해진 일을 사람 없이 = Codex 러너, 그때그때 개발·판단 = 곁에서 모는 도구.
-  - kick: 정리
+    columns:
+      - head: Codex 러너
+        sub: 사람 없이 정기적으로
+        points:
+          - 안전하게 도는 게 관건
+          - 가드레일이 본체
+          - 이상한 날을 설계한다
+      - head: Claude Code
+        sub: 그때그때 개발·판단
+        accent: true
+        points:
+          - 빠른 주고받기가 관건
+          - 위임 경계 설정이 핵심
+          - 사람과 맥락을 함께 쌓는다
+    note: 어느 쪽이 더 낫다기보다 작업의 성격이 다르다.
+  - layout: cover
+    kick: 정리
     title: 러너의 품질 = 가드레일의 품질
-    body: 모델이 얼마나 똑똑한가보다, 틀렸을 때 무엇을 안 하게 막았는가.
-    cover: true
+    body: 모델이 얼마나 똑똑한가보다, 틀렸을 때 무엇을 안 하게 막아 뒀는지가 결과를 지킨다.
 ---
 
 [Claude Code 글](/guide/claude-code-ax)과 같은 틀로 Codex를 본다. 다만 내가 Codex를 쓰는 자리는 결이 좀 다르다. Claude Code가 곁에서 개발을 거드는 쪽이라면, Codex는 **사람 없이 정해진 일을 도는 러너**로 쓸 때 값이 가장 달랐다. 그래서 이 글의 각도는 "Codex가 코드를 얼마나 잘 짜나"가 아니라 <strong>"Codex를 무인 에이전트로 거는 법"</strong>이다.

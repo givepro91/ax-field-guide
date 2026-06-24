@@ -12,30 +12,63 @@ related:
   - label: Human-in-the-loop 패턴
     href: "/guide/human-in-the-loop"
 slides:
-  - kick: AX Field Guide · 패턴·플레이북
-    title: audit trail 설계
+  - layout: cover
+    kick: AX Field Guide · 패턴·플레이북
+    title: AI 자동화의 audit trail 설계
     body: 무슨 입력에 무슨 판단을 왜 했는지 되짚을 수 있게
-    cover: true
-  - kick: 테제
+  - layout: thesis
+    kick: 테제
     title: 추적은 사후가 아니라 설계다
-    body: 사고가 난 뒤 로그를 찾는 게 아니라, 처음부터 되짚을 수 있게 남긴다.
-  - kick: 최소 구성
-    title: 무엇을 남기나
-    bullets:
-      - 입력 — 무엇을 보고
-      - 판단 — 무엇을 냈고 왜
-      - 승인 — 누가 통과시켰나
-      - 결과 — 적용·롤백 여부
-  - kick: 쓸모
-    title: 세 가지 질문에 답한다
-    body: 무슨 일이 있었나 · 누구 책임인가 · 어떻게 되돌리나.
-  - kick: 함정
-    title: 남기기만 하고 못 찾으면
-    body: 다 기록해도 검색·연결이 안 되면 없는 것과 같다. 추적은 읽을 수 있어야 한다.
-  - kick: 정리
-    title: 비결정 시스템의 기본값
-    body: 매번 다른 답을 내는 부품일수록, 무엇을 왜 했는지가 더 중요하다.
-    cover: true
+    body: 사고가 난 뒤 로그를 뒤지는 일이 아니라, 처음부터 "무슨 입력에 무슨 판단을 왜 했고 누가 통과시켰는지"를 되짚을 수 있게 남겨 두는 설계다.
+  - layout: flow
+    kick: 최소 구성
+    title: 한 판단 = 네 칸이 하나로 이어진 레코드
+    steps:
+      - label: 입력
+        note: 무엇을 봤나 — 판단의 출발점
+      - label: "판단 + 근거"
+        note: 무엇을·왜 냈나 — 비결정 시스템에서 가장 빠지기 쉬운 칸
+      - label: 승인
+        note: 누가 통과시켰나 — 책임 소재
+      - label: 결과
+        note: 적용됐나·롤백됐나
+    note: 네 칸이 흩어져 있으면 사고 현장에서 다시 잇느라 시간을 다 쓴다.
+  - layout: stack
+    kick: 쓸모
+    title: audit trail이 답해야 하는 세 질문
+    layers:
+      - label: 무슨 일이 있었나
+        note: 어떤 입력에서 어떤 출력이 나왔는지 시간순 재구성 — 디버깅의 출발점
+      - label: 누구 책임인가
+        note: 자동 적용인지 사람 승인인지, 승인했다면 누가 무엇을 보고 했는지
+      - label: 어떻게 되돌리나
+        note: 변경 전 상태를 안 남기면 롤백할 방법이 없다
+    note: 이 세 질문에 답이 안 나오는 기록은 양이 많아도 그냥 로그 더미다.
+  - layout: compare
+    kick: 함정
+    title: 남기는 것과 찾는 것은 다르다
+    columns:
+      - head: 쌓기만 한 기록
+        sub: 실제로는 없는 것과 같다
+        points:
+          - 로그가 흩어져 연결이 안 된다
+          - 식별자 없이 검색이 안 된다
+          - 사고 현장에서 그 기록을 쓸 수 없다
+      - head: 찾을 수 있는 기록
+        sub: 실질적인 audit trail
+        accent: true
+        points:
+          - 식별자로 입력·판단·승인·결과를 묶는다
+          - 한 사건을 한자리에 모아 볼 수 있다
+          - 검색이 된다
+  - layout: thesis
+    kick: 비결정 시스템
+    title: 매번 다른 답을 내는 부품일수록 더
+    body: 결정론적 코드는 코드만 봐도 재현되지만, 모델은 같은 입력에도 다른 답이 나올 수 있다. "그때 왜 그랬나"를 남기지 않으면 사후에 복원할 길이 없다.
+  - layout: cover
+    kick: 정리
+    title: 네 칸을 하나로 묶고, 세 질문에 답하게 하고, 찾을 수 있게 둔다
+    body: 추적은 사고 후가 아니라 설계 때 정한다.
 ---
 
 [승인 게이트](/guide/approval-gates)와 [Human-in-the-loop](/guide/human-in-the-loop)이 "틀리기 전에 막는" 장치라면, audit trail은 "틀린 뒤에 되짚는" 장치다. 둘은 짝이다. 아무리 게이트를 잘 둬도 비결정적인 시스템은 언젠가 예상 못 한 출력을 내고, 그때 무슨 일이 있었는지 되짚을 수 없으면 손쓸 데가 없다. 그리고 이 되짚기는 사고가 난 뒤에 만들 수 없다 — 무엇을 남길지는 설계할 때 정해진다.

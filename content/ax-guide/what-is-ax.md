@@ -12,34 +12,51 @@ related:
   - label: 승인 게이트
     href: "/guide/approval-gates"
 slides:
-  - kick: AX Field Guide
+  - layout: cover
+    kick: AX Field Guide
     title: AX란 무엇인가
     body: 백엔드 출신 프로덕트 리드가 현장에서 정리하는 AX 작업 노트
-    cover: true
-  - kick: 테제
+  - layout: thesis
+    kick: 테제
     title: 도입이 아니라 재설계다
     body: AX는 사람이 반복적으로 판단하던 업무 구조를 AI·데이터·자동화·승인 흐름으로 다시 설계하는 일.
-  - kick: 구분
+  - layout: compare
+    kick: 구분
     title: "도입 ≠ AX"
-    body: "“도입하고 나서, 누가 무슨 판단을 더 이상 직접 하지 않게 되었나?” 답이 없으면 도구가 하나 는 것."
-  - kick: 맡은 사람의 문제
+    columns:
+      - head: AI 도입
+        sub: 도구가 하나 늘어난다
+        points:
+          - 새 도구를 켜고 모델 성능을 본다
+          - "“써봤다”에서 멈춘다"
+          - 판단의 주체는 그대로 사람
+      - head: AX 재설계
+        sub: 판단 구조가 바뀐다
+        accent: true
+        points:
+          - 판단이 내려지는 자리가 옮겨간다
+          - 데이터·승인·롤백을 다시 짠다
+          - 1년 돌아가게 운영까지 본다
+    note: 바뀌는 건 도구가 아니라, 결정이 내려지는 자리다.
+  - layout: thesis
+    kick: 가르는 질문
+    title: 누가 더는 직접 판단하지 않게 됐나
+    body: 도입하고 나서 이 질문에 답이 없으면 도구가 하나 는 것. 답이 분명하면 거기서 진짜 질문이 시작된다 — 그 판단을 기계에 넘겨도 괜찮으려면 무엇이 참이어야 하는가.
+  - layout: flow
+    kick: 맡은 사람의 문제
     title: 모델보다 앞단
-    bullets:
-      - 무엇을 바꿀지 고르기
-      - 결과를 믿게 만들기
-      - 1년 돌릴 수 있게 운영하기
-  - kick: 핵심
-    title: 중요한 다섯 가지
-    bullets:
-      - 문제 정의
-      - 데이터
-      - 워크플로우
-      - 승인 구조
-      - 운영 가능성
-  - kick: 정리 중인 정의
+    steps:
+      - label: 무엇을 바꿀지 고르기
+        note: 시연 좋은 일이 가치 있는 일은 아니다
+      - label: 결과를 믿게 만들기
+        note: 검증·승인·감사
+      - label: 1년 돌릴 수 있게
+        note: 운영·롤백·유지
+    note: 모델 성능보다, 그 앞뒤에 사람이 무엇을 쥐고 무엇을 넘기느냐가 먼저다.
+  - layout: cover
+    kick: 정리 중인 정의
     title: "실패를 전제로, 문제부터 고른다"
     body: 시스템 사고 + 제품 판단을 비결정적 부품 위에 다시 적용하는 일.
-    cover: true
 ---
 
 AX라는 말을 처음 들었을 때는 DX(디지털 전환)의 다음 버전 정도로 짐작했다. 종이를 디지털로 바꾼 게 DX였으니, 디지털을 AI로 바꾸는 게 AX겠거니. 틀린 짐작은 아니지만, 그 비유는 중요한 걸 가린다. AX의 어려움은 "AI를 쓴다"에 있지 않다. **무엇을 AI에 넘기고 무엇을 사람이 쥐고 있을지 다시 정하는 것**에 있다.

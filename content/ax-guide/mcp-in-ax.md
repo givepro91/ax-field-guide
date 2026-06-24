@@ -14,26 +14,58 @@ related:
   - label: AX란 무엇인가
     href: "/guide/what-is-ax"
 slides:
-  - kick: AX Field Guide · 도구·기법
-    title: MCP는 AX에서 무엇인가
+  - layout: cover
+    kick: AX Field Guide · 도구·기법
+    title: MCP는 AX에서 어떤 의미가 있는가
     body: 연결을 표준화한다는 것의 값과 대가
-    cover: true
-  - kick: 한 줄
-    title: 연결의 표준
-    body: 모델이 외부 도구·데이터에 닿는 방식을 한 규약으로. 매번 따로 붙이던 걸 표준으로.
-  - kick: AX 의미
-    title: 워크플로우 연결 비용을 낮춘다
-    body: 데이터 접근·도구 연결이 AX 설계의 큰 부분인데, MCP는 그 비용을 줄인다.
-  - kick: 운영의 현실
-    title: 끊기면 어떻게 되나
-    body: 연결이 쉬워질수록 그 연결에 의존하게 된다. 인증이 비고, 서버가 끊기면?
-  - kick: 폴백
-    title: 끊겨도 굴러가게
-    body: 연결이 끊겼을 때 물러설 길(CLI·대안 경로)이 있느냐가 운영을 가른다.
-  - kick: 솔직히
-    title: 더 써봐야 안다
-    body: MCP 자체를 깊게 운영한 경험은 아직 얕다. 지금은 연결의 신뢰성이라는 문제의식까지.
-    cover: true
+  - layout: thesis
+    kick: 한 줄
+    title: 연결을 표준으로 만든다
+    body: MCP는 모델이 외부 도구와 데이터에 닿는 방식을 표준화하려는 규약이다. 매번 따로 만들어야 했던 걸 공통 규약으로 정리한다.
+  - layout: stack
+    kick: AX 의미
+    title: 왜 AX 설계에 닿는가
+    layers:
+      - label: 모델·에이전트
+        note: 판단하고 도구를 호출한다
+      - label: MCP 연결 규약
+        note: 연결 방식을 표준화 — 그 비용을 낮춘다
+      - label: 도구·데이터·워크플로우
+        note: 실제 업무 데이터와 외부 시스템
+    note: AX 설계의 상당 부분이 모델을 실제 업무 데이터와 도구에 연결하는 일이다. MCP는 그 연결 비용을 낮춘다.
+  - layout: flow
+    kick: 운영의 현실
+    title: 연결이 쉬워지면, 끊겼을 때가 문제다
+    steps:
+      - label: 연결 표준화로 의존도 증가
+        note: 연결이 쉬워질수록 그 연결에 기대게 된다
+      - label: 인증 만료·서버 끊김
+        note: 외부 앱 연동 인증이 비어 호출이 실패한 경험
+      - label: 일이 멈추느냐, 우회하느냐
+        note: CLI 우회, 빌드 출력 직접 확인으로 물러서서 진행
+    note: 얼마나 많은 도구를 연결하나가 아니라 끊겼을 때 일이 멈추느냐, 다른 길로 굴러가느냐가 진짜 질문이다.
+  - layout: compare
+    kick: 관점
+    title: 연결의 값을 어떻게 받을 것인가
+    columns:
+      - head: "도구를 많이 붙일 수 있다"
+        sub: 표준이 주는 편의에 집중
+        points:
+          - MCP 서버 수로 성숙도를 잰다
+          - 연결 자체를 목적으로 삼는다
+          - 끊겼을 때 대안이 없다
+      - head: "이 연결에 얼마나 기대도 되나"
+        sub: 신뢰성과 폴백에 집중
+        accent: true
+        points:
+          - 연결이 끊겼을 때 폴백을 미리 정한다
+          - CLI·대안 경로를 병행 유지한다
+          - 표준은 쉽게 만들지, 끊기지 않게 만들지는 않는다
+    note: 표준은 연결을 쉽게 만들지만 끊기지 않게 만들어 주지는 않는다.
+  - layout: cover
+    kick: 솔직히
+    title: 지금은 문제의식까지
+    body: MCP를 깊게 운영한 경험은 아직 얕다. "연결의 신뢰성과 폴백" — 이 문제의식을 이 자리에 남겨 둔다.
 ---
 
 이 글은 솔직히 먼저 적어 둔다. 나는 MCP(Model Context Protocol)를 깊게 운영해 본 경험이 아직 얕다. 그래서 "MCP를 이렇게 쓰면 좋다"는 사용기가 아니라, **MCP를 AX 설계에 둘 때 내가 묻게 되는 것**에 대한 글에 가깝다. 결론이 덜 난 채로 남겨 두는 글이다.

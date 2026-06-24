@@ -3,11 +3,16 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { buildNav, type TrendItem } from '../nav';
 import trends from '../../content/trends/index.json';
+import { digestTrends, isRelease } from '../trends';
 
 // draft 글은 prod 빌드(공개)에서 제외, dev 에서는 보인다.
 const entries = await getCollection('guide', ({ data }) => (import.meta.env.PROD ? !data.draft : true));
 const groups = buildNav(entries);
-const recent = ((trends.items || []) as TrendItem[]).slice(0, 3);
+const allTrends = (trends.items || []) as TrendItem[];
+const dg = digestTrends(allTrends);
+const topTopics = dg.topics.slice(0, 6);
+// 미리보기엔 릴리스 태그 말고 실속 항목만
+const recent = allTrends.filter((it) => !isRelease(it)).slice(0, 3);
 
 const cardDesc: Record<string, string> = {
   '개념·관점': 'AX를 내 언어로 정의하고, 맡으면 실제로 무엇을 하는지.',
@@ -60,15 +65,21 @@ const cardDesc: Record<string, string> = {
 
     <p class="sec-t">최근 동향</p>
     <section class="trends">
-      <div class="t-h"><span class="live"></span> 매일 자동 수집</div>
+      <div class="t-h"><span class="live"></span> 매일 자동 수집 · 주제로 묶어 봄</div>
+      {topTopics.length > 0 && (
+        <div class="t-topics">
+          {topTopics.map((t) => (<a class="t-topic" href="/trends"><span>{t.label}</span><i>{t.count}</i></a>))}
+        </div>
+      )}
       <ul>
         {recent.map((it) => (
           <li>
             <div class="meta"><span class="src">{it.source}</span> · {it.date}</div>
-            <a class="ti" href={it.url}>{it.title}</a>
+            <a class="ti" href={it.url} target="_blank" rel="noopener">{it.title}</a>
           </li>
         ))}
       </ul>
+      <a class="t-more" href="/trends">동향 전체 풍경 보기 →</a>
     </section>
 
     <footer class="site-footer">

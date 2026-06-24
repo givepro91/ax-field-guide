@@ -12,25 +12,51 @@ related:
   - label: Codex를 AX 관점에서 쓰는 법
     href: "/guide/codex-ax"
 slides:
-  - kick: AX Field Guide · 도구·기법
+  - layout: cover
+    kick: AX Field Guide · 도구·기법
     title: Claude Code vs Codex
-    body: 승자가 아니라, 작업 성격별 자리
-    cover: true
-  - kick: 테제
-    title: 우열보다 자리다
-    body: 어느 게 더 똑똑한가가 아니라, 어떤 작업 성격에 무엇이 맞았나.
-  - kick: 가른 축
-    title: 사람이 얼마나 끼나
-    body: 사람 없이 정기적으로 도는 일 ↔ 곁에서 빠르게 주고받는 일.
-  - kick: 분담
-    title: 러너 vs 협업
-    bullets:
-      - 무인 정기 작업 → Codex 러너
-      - 개발·판단이 끼는 일 → 곁에서 모는 도구
-  - kick: 솔직히
-    title: 정밀 비교는 아직
-    body: 같은 일을 둘 다에 시켜 우열을 잰 건 아니다. 자리가 갈려 비교할 일이 적었다.
-    cover: true
+    body: 어느 게 낫냐가 아니라, 어떤 일에 무엇이 맞았나
+  - layout: thesis
+    kick: 테제
+    title: 우열보다 자리가 먼저 갈렸다
+    body: 어느 모델이 더 똑똑한가가 아니라, 사람이 얼마나 끼느냐에 따라 두 도구가 자연스럽게 다른 자리에 놓였다.
+  - layout: compare
+    kick: 가른 축
+    title: 사람 개입 빈도가 자리를 갈랐다
+    columns:
+      - head: 무인 정기 → 러너
+        sub: 사람이 매번 안 본다
+        points:
+          - 가드레일·검증이 본체
+          - 안전하게 도는 게 관건
+          - 나는 여기에 Codex
+      - head: 개발·판단 → 협업
+        sub: 사람과 빠르게 주고받는다
+        accent: true
+        points:
+          - 위임 경계·승인이 관건
+          - 맥락을 함께 쌓는 게 중요
+          - 나는 여기에 Claude Code
+    note: "\"둘 중 뭘 쓸까\"보다 \"이 일에 사람이 얼마나 껴야 하나\"를 먼저 물으면, 도구는 거기서 정해진다."
+  - layout: flow
+    kick: 분담 방식
+    title: 작업 성격이 도구를 고른다
+    steps:
+      - label: 일의 성격 파악
+        note: 사람이 매번 봐야 하는가, 아닌가
+      - label: 무인 정기라면 → Codex 러너
+        note: 가드레일·검증·기록이 핵심
+      - label: 그때그때 개발·판단이라면 → Claude Code
+        note: 빠른 주고받기, 위임 경계 설정
+    note: 두 도구가 경쟁하기보다 작업 축의 양 끝에 각각 자리 잡았다.
+  - layout: thesis
+    kick: 솔직히
+    title: 정밀 비교는 아직 보류
+    body: 같은 작업을 두 도구에 똑같이 시켜 우열을 잰 적이 없다. 자리가 일찍 갈려 정면 비교를 할 동기가 없었다 — 이건 그대로 남겨둔 자리다.
+  - layout: cover
+    kick: 지금 단계의 한 줄
+    title: 자리부터 보고, 도구는 거기서 고른다
+    body: 같은 일을 양쪽에 시켜 보는 실험은 다음에 채울 자리로 남겨둔다.
 ---
 
 도구 두 개를 두고 "어느 게 낫냐"는 질문을 자주 받지만, 나는 그 질문이 대개 틀을 잘못 잡았다고 본다. [Claude Code](/guide/claude-code-ax)와 [Codex](/guide/codex-ax)를 둘 다 쓰면서 느낀 건, 우열을 가리기 전에 **자리가 먼저 갈렸다**는 점이다. 그래서 이 글은 둘 중 하나를 고르는 글이 아니다.

@@ -12,30 +12,62 @@ related:
   - label: 어떤 루프를 먼저 고를까
     href: "#"
 slides:
-  - kick: AX Field Guide · 도구·기법
+  - layout: cover
+    kick: AX Field Guide · 도구·기법
     title: 에이전트를 모는 법
     body: 프롬프트를 잘 쓰는 일에서, 에이전트가 일하는 환경을 설계하는 일로
-    cover: true
-  - kick: 테제
+  - layout: thesis
+    kick: 테제
     title: 프롬프트가 아니라 환경이다
-    body: 잘 쓴다는 건 더 나은 문장이 아니라, 모델이 일하는 환경(harness)을 짜고 그걸 사람 없이 돌리는(loop) 일.
-  - kick: 사다리
-    title: 네 단어는 경쟁자가 아니다
-    bullets:
-      - Context — 무엇을 보여줄지 (원리)
-      - Harness — 모델 바깥 전부 (환경)
-      - Loop — 사람을 루프에서 빼다 (자동화)
-      - Ralph — 가장 단순한 루프 (구현)
-  - kick: 사람의 자리
-    title: in the loop → on the loop
-    body: 매 단계 개입하던 자리에서, 환경·검증·종료조건을 설계하는 자리로 옮겨간다.
-  - kick: Ralph
-    title: 한 줄짜리 루프
-    body: while :; do cat PROMPT.md | claude-code ; done — 매번 새 컨텍스트에 같은 지시. 작명은 농담, 기법은 진지.
-  - kick: 배운 점
-    title: "Ralph를 써라가 아니다"
-    body: 사다리의 어느 칸이 지금 일에 맞는지 고르는 판단. 회복 가능하고 검증 가능한 반복에만 루프가 값을 한다.
-    cover: true
+    body: 에이전트를 잘 쓴다는 건 더 나은 프롬프트 문장이 아니라, 모델이 일하는 환경(harness)을 설계하고 그 환경을 사람 없이 돌릴 수 있게(loop) 만드는 일이다.
+  - layout: stack
+    kick: 사다리
+    title: 네 단어는 추상도가 다른 한 사다리다
+    layers:
+      - label: "Ralph — 구현"
+        note: "while :; do cat PROMPT.md | claude-code ; done — 가장 손에 잡히는 한 줄"
+      - label: Loop engineering — 자동화
+        note: 사람이 매번 돌리던 프롬프트·검증·재실행을 루프로 대체
+      - label: Harness engineering — 환경
+        note: "Agent = Model + Harness — 도구 실행·상태·검증 게이트·실패 복구 전부"
+      - label: Context engineering — 원리
+        note: 다음 스텝에 필요한 정확한 정보로 컨텍스트 윈도우를 채우는 기술
+    note: 아래가 원리, 위로 갈수록 손에 잡히는 구현. 경쟁하는 유행어가 아니라 같은 사다리의 다른 칸이다.
+  - layout: compare
+    kick: 사람의 자리
+    title: "in the loop → on the loop"
+    columns:
+      - head: "루프 안에서 (in the loop)"
+        sub: 매 단계 내가 개입
+        points:
+          - 매 단계 내가 프롬프트
+          - 다음 지시도 내가
+          - 에이전트 수만큼 내가 병목
+      - head: "루프 위에서 (on the loop)"
+        sub: 환경·게이트를 설계
+        accent: true
+        points:
+          - 환경·검증·종료조건을 설계
+          - 루프가 돌고 나는 교정
+          - 사람은 게이트로 남는다
+    note: 자동화가 값을 하려면 자동화 바깥이 더 단단해야 한다.
+  - layout: flow
+    kick: Ralph
+    title: 가장 단순한 루프의 작동 방식
+    steps:
+      - label: "PROMPT.md 읽기"
+        note: 기억은 파일시스템·코드베이스·git이 쥔다
+      - label: "claude-code 실행"
+        note: 매 iteration마다 새 컨텍스트 — 대화 히스토리 없음
+      - label: 결과 확인
+        note: 검증 통과 여부 판단
+      - label: 반복
+        note: "while :; — 종료 조건은 밖에서 단단히"
+    note: 작명은 농담(Ralph Wiggum), 기법은 진지하다. 흔히 RALF로 잘못 적히지만 원전 표기는 Ralph다.
+  - layout: cover
+    kick: 배운 점
+    title: "사다리의 어느 칸이 지금 이 일에 맞는지 고르는 판단"
+    body: 회복 가능하고 검증 가능한 반복에만 루프가 값을 한다. 도구를 늘리는 게 아니라 일의 성격을 읽는 쪽이 먼저다.
 ---
 
 처음 한동안은 프롬프트를 잘 쓰는 게 전부인 줄 알았다. 같은 모델이라도 질문을 어떻게 던지느냐로 결과가 갈렸으니 아주 틀린 생각은 아니었다. 그런데 코딩 에이전트를 며칠씩 붙여 일을 시키다 보면, 좋은 답을 만드는 무게중심이 프롬프트 문장에서 다른 데로 옮겨가 있다는 걸 느낀다. 모델에게 무엇을 보여줄지, 모델이 어떤 환경에서 도구를 쓰고 어디서 멈춰 검증받는지, 그리고 그 과정을 내가 매번 손으로 돌릴지 자동으로 돌게 둘지 — 결과는 거기서 갈렸다.

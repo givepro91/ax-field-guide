@@ -5,8 +5,11 @@ import Topbar from '../../components/Topbar.astro';
 import SideNav from '../../components/SideNav.astro';
 import trends from '../../../content/trends/index.json';
 import type { TrendItem } from '../../nav';
+import { digestTrends } from '../../trends';
 const entries = await getCollection('guide');
 const items = (trends.items || []) as TrendItem[];
+const d = digestTrends(items);
+const fmtRange = d.from === d.to ? d.to : `${d.from} ~ ${d.to}`;
 ---
 
 <Base title="동향 — AX Field Guide">
@@ -16,19 +19,57 @@ const items = (trends.items || []) as TrendItem[];
     <main class="main">
       <p class="kick">동향 · Trends</p>
       <h1>최근 AX 동향</h1>
-      <p class="lead">매일 자동 수집·요약하는 AX 기술 동향. 출처 링크와 요약만 싣고, 외부 공개 기사만 다룹니다.</p>
-      <section class="trends" style="margin-top:18px">
-        <div class="t-h"><span class="live"></span> 매일 자동 수집</div>
-        <ul>
-          {items.map((it) => (
-            <li>
-              <div class="meta"><span class="src">{it.source}</span> · {it.date}{it.category ? ` · ${it.category}` : ''}</div>
-              <a class="ti" href={it.url}>{it.title}</a>
-              {it.summary && <p class="summary">{it.summary}</p>}
-            </li>
-          ))}
-        </ul>
-      </section>
+      <p class="lead">매일 자동 수집한 외부 공개 글을 <b>주제·출처별로 묶어 풍경으로</b> 보여줍니다. 무엇이 자주 다뤄지는지 먼저 보고, 필요한 영역만 펼쳐 읽으세요.</p>
+
+      <div class="tr-stat">
+        <span><b>{d.total}</b>건</span>
+        <span><b>{d.sourceCount}</b>개 소스</span>
+        <span>{fmtRange}</span>
+        {d.releaseTotal > 0 && <span class="muted">릴리스 {d.releaseTotal}건 접힘</span>}
+      </div>
+
+      {d.topics.length > 0 && (
+        <section class="tr-signal" aria-label="주제 신호">
+          <p class="tr-sect">주제 신호 — 이 기간 자주 다뤄진 것</p>
+          <ul class="tr-bars">
+            {d.topics.map((t) => (
+              <li>
+                <span class="tl">{t.label}</span>
+                <span class="tb"><i style={`width:${Math.max(8, (t.count / d.maxTopic) * 100)}%`}></i></span>
+                <span class="tc">{t.count}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {d.groups.map((g) => (
+        <section class="tr-group">
+          <p class="tr-sect">{g.category} <span class="n">{g.count}</span></p>
+          <ul class="tr-list">
+            {g.items.map((it) => (
+              <li>
+                <div class="meta"><span class="src">{it.source}</span> · {it.date}</div>
+                <a class="ti" href={it.url} target="_blank" rel="noopener">{it.title}</a>
+                {it.summary && <p class="summary">{it.summary}</p>}
+                {it.tags && it.tags.length > 0 && (
+                  <div class="chips">{it.tags.slice(0, 4).map((t) => <span class="chip">{t}</span>)}</div>
+                )}
+              </li>
+            ))}
+          </ul>
+          {g.releases.length > 0 && (
+            <details class="tr-rel">
+              <summary>릴리스·버전 업데이트 {g.releases.length}건</summary>
+              <ul>
+                {g.releases.map((it) => (
+                  <li><a href={it.url} target="_blank" rel="noopener">{it.title}</a> <span class="src">{it.source}</span> · {it.date}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+        </section>
+      ))}
     </main>
   </div>
 </Base>

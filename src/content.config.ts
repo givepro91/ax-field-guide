@@ -17,11 +17,20 @@ const guide = defineCollection({
     slides: z
       .array(
         z.object({
+          // layout 미지정 시 Deck 이 데이터로 추론(cover/columns/steps/layers → 해당 레이아웃, 그 외 bullets).
+          layout: z.enum(['cover', 'thesis', 'compare', 'flow', 'stack', 'bullets']).optional(),
           kick: z.string().optional(),
           title: z.string(),
           body: z.string().optional(),
           bullets: z.array(z.string()).optional(),
           cover: z.boolean().optional().default(false),
+          // 시각+내용 레이아웃 데이터 (해당 레이아웃에서만 사용)
+          columns: z
+            .array(z.object({ head: z.string(), sub: z.string().optional(), points: z.array(z.string()).default([]), accent: z.boolean().optional() }))
+            .optional(),
+          steps: z.array(z.object({ label: z.string(), note: z.string().optional() })).optional(),
+          layers: z.array(z.object({ label: z.string(), note: z.string().optional() })).optional(),
+          note: z.string().optional(), // 시각 레이아웃 아래 보조 한 줄
         }),
       )
       .default([]),

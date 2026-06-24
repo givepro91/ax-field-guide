@@ -12,26 +12,65 @@ related:
   - label: AX란 무엇인가
     href: "/guide/what-is-ax"
 slides:
-  - kick: AX Field Guide · 개념·관점
-    title: RAG와 Agent Workflow
-    body: 맥락을 채우는 두 방식, 언제 무엇으로 충분한가
-    cover: true
-  - kick: 테제
-    title: 같은 목적, 다른 모양
-    body: 둘 다 모델의 부족을 메운다. RAG는 맥락을 미리 넣고, Agent는 스스로 단계를 밟는다.
-  - kick: RAG
-    title: 검색해서 넣고, 한 번 답한다
-    body: 질문 → 관련 문서 검색 → 맥락 주입 → 1회 생성. 단순하고 예측 가능.
-  - kick: Agent
-    title: 계획하고, 도구 쓰고, 반복한다
-    body: 목표 → 계획 → 도구 호출 → 관찰 → 다시. 강력하지만 비결정적.
-  - kick: 선택
-    title: 한 번 조회로 되면 RAG
-    body: 외부 지식만 채우면 끝나는 일에 Agent를 쓰면 비용·불확실성만 는다.
-  - kick: 정리
-    title: 대개는 섞는다
-    body: Agent의 한 단계가 RAG인 경우가 흔하다. 대립이 아니라 층위가 다르다.
-    cover: true
+  - layout: cover
+    kick: AX Field Guide · 개념·관점
+    title: RAG와 Agent Workflow의 차이
+    body: 맥락을 채우는 두 방식 — 언제 무엇으로 충분한가
+  - layout: thesis
+    kick: 테제
+    title: 대립이 아니라 층위 차이다
+    body: RAG는 답하기 전에 맥락을 미리 채워 넣는 방식이고, Agent는 스스로 여러 단계를 밟아 가며 풀어가는 방식이다.
+  - layout: compare
+    kick: 두 흐름
+    title: "직선 vs 순환"
+    columns:
+      - head: RAG
+        sub: 직선 — 한 번 채우고, 한 번 답한다
+        points:
+          - 질문 → 검색 → 맥락 주입 → 1회 생성
+          - 흐름이 예측 가능하고 비용이 고정적
+          - 모델이 모르는 외부 지식·최신 정보에 강함
+      - head: Agent Workflow
+        sub: 순환 — 목표까지 반복한다
+        accent: true
+        points:
+          - 계획 → 도구 호출 → 관찰 → 다시
+          - 중간 결과에 따라 다음 행동이 달라짐
+          - 단계 수만큼 비용·불확실성이 늘어남
+    note: 더 강력한 도구가 늘 더 맞는 도구는 아니다.
+  - layout: compare
+    kick: 선택 기준
+    title: 한 번 조회면 RAG, 단계가 필요하면 Agent
+    columns:
+      - head: RAG가 맞을 때
+        points:
+          - 외부 지식만 채우면 된다
+          - 한 번 조회로 충분하다
+          - 예측 가능·저비용이 중요하다
+      - head: Agent가 맞을 때
+        accent: true
+        points:
+          - 단계마다 다음에 할 일이 달라진다
+          - 여러 도구를 순서대로 써야 한다
+          - 일을 끝까지 끌고 가야 한다
+    note: 외부 지식을 끌어와 답하면 끝나는 일에 에이전트를 붙이면 얻는 것 없이 비용과 불확실성만 늘어난다.
+  - layout: flow
+    kick: 실제 구성
+    title: Agent의 한 단계가 RAG인 경우
+    steps:
+      - label: 목표 수신
+        note: Agent가 해야 할 일을 정한다
+      - label: 도구 선택
+        note: 이건 문서를 찾아봐야겠다고 판단
+      - label: 검색 호출 (RAG)
+        note: 이 순간이 RAG — 맥락을 채운다
+      - label: 관찰 후 다음 단계
+        note: 결과를 보고 다음 행동을 정한다
+    note: 둘은 경쟁 관계가 아니다. RAG는 맥락을 채우는 기본 동작, Agent는 그걸 포함해 여러 단계를 엮는 구조다.
+  - layout: cover
+    kick: 정리
+    title: RAG냐 Agent냐가 아니라
+    body: 이 일에 단계가 필요한가, 한 번 채우면 되는가를 먼저 묻는다.
 ---
 
 AX 설계를 하다 보면 "이건 RAG로 할 일인가 에이전트로 할 일인가"를 정해야 하는 순간이 온다. 둘 다 모델 혼자서는 부족한 걸 메워주는 방법이라 헷갈리기 쉬운데, 메우는 방식이 꽤 다르다. 이 구분을 분명히 해두면 [어떤 루프를 고를지](/guide/choosing-loops) 정한 뒤 그걸 무엇으로 구현할지가 한결 명확해진다.

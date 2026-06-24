@@ -1,28 +1,96 @@
 ---
-interface Slide { kick?: string; title: string; body?: string; bullets?: string[]; cover?: boolean }
+interface Col { head: string; sub?: string; points?: string[]; accent?: boolean }
+interface Step { label: string; note?: string }
+interface Slide {
+  layout?: 'cover' | 'thesis' | 'compare' | 'flow' | 'stack' | 'bullets';
+  kick?: string;
+  title: string;
+  body?: string;
+  bullets?: string[];
+  cover?: boolean;
+  columns?: Col[];
+  steps?: Step[];
+  layers?: Step[];
+  note?: string;
+}
 interface Props { slides?: Slide[] }
 const { slides = [] } = Astro.props;
+
+// layout 미지정이면 담긴 데이터로 추론한다 — 작성자는 데이터만 주면 된다.
+function layoutOf(s: Slide): string {
+  if (s.layout) return s.layout;
+  if (s.cover) return 'cover';
+  if (s.columns && s.columns.length) return 'compare';
+  if (s.steps && s.steps.length) return 'flow';
+  if (s.layers && s.layers.length) return 'stack';
+  return 'bullets';
+}
+const total = slides.length;
 ---
 
-{slides.length > 0 && (
+{total > 0 && (
   <div class="deck" id="deck" role="dialog" aria-modal="true" aria-label="프레젠테이션" tabindex="-1">
     <div class="deck-bar"><i id="deck-prog"></i></div>
     <div class="deck-stage" id="deck-stage">
-      {slides.map((s) => (
-        <section class={`slide${s.cover ? ' cover' : ''}`}>
-          {s.kick && <p class="s-kick">{s.kick}</p>}
-          <h2>{s.title}</h2>
-          {s.body && <p>{s.body}</p>}
-          {s.bullets && s.bullets.length > 0 && (
-            <ul>{s.bullets.map((b) => (<li><span class="n">·</span> {b}</li>))}</ul>
-          )}
-        </section>
-      ))}
+      {slides.map((s, idx) => {
+        const lay = layoutOf(s);
+        return (
+          <section class={`slide lay-${lay}`}>
+            <span class="s-idx" aria-hidden="true">{String(idx + 1).padStart(2, '0')}</span>
+            <span class="s-no">{String(idx + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
+            {s.kick && <p class="s-kick">{s.kick}</p>}
+            <h2>{s.title}</h2>
+
+            {lay === 'thesis' && s.body && <p class="s-thesis">{s.body}</p>}
+
+            {lay !== 'thesis' && s.body && <p class="s-body">{s.body}</p>}
+
+            {lay === 'compare' && s.columns && (
+              <div class="s-cols" data-n={s.columns.length}>
+                {s.columns.map((c) => (
+                  <div class={`s-col${c.accent ? ' is-accent' : ''}`}>
+                    <div class="s-col-h">{c.head}</div>
+                    {c.sub && <div class="s-col-sub">{c.sub}</div>}
+                    {c.points && c.points.length > 0 && (
+                      <ul>{c.points.map((p) => (<li>{p}</li>))}</ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {lay === 'flow' && s.steps && (
+              <ol class="s-flow">
+                {s.steps.map((st, i) => (
+                  <li>
+                    <span class="s-n">{i + 1}</span>
+                    <span class="s-flow-b"><b>{st.label}</b>{st.note && <i>{st.note}</i>}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+
+            {lay === 'stack' && s.layers && (
+              <div class="s-stack">
+                {s.layers.map((ly) => (
+                  <div class="s-layer"><b>{ly.label}</b>{ly.note && <span>{ly.note}</span>}</div>
+                ))}
+              </div>
+            )}
+
+            {(lay === 'bullets' || (lay !== 'compare' && lay !== 'flow' && lay !== 'stack')) && s.bullets && s.bullets.length > 0 && (
+              <ul class="s-bullets">{s.bullets.map((b) => (<li><span class="n">·</span> {b}</li>))}</ul>
+            )}
+
+            {s.note && <p class="s-note">{s.note}</p>}
+          </section>
+        );
+      })}
     </div>
     <div class="deck-foot">
       <button class="exit" id="exit-btn">✕ 닫기 (Esc)</button>
       <button id="prev-btn">← 이전</button>
-      <span class="count" id="deck-count">1 / {slides.length}</span>
+      <span class="count" id="deck-count">1 / {total}</span>
       <button id="next-btn">다음 →</button>
       <span class="hint">← → 이동 · F 전체화면 · Esc 종료</span>
     </div>
