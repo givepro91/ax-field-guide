@@ -1,0 +1,96 @@
+{
+  "date": "2026-06-25",
+  "items": [
+    {
+      "date": "2026-06-25",
+      "title": "v0.112.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.112.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-24T18:45:45Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.112.0 (2026-06-24) Full Changelog: v0.111.0...v0.112.0 Features client: add support for system.message streaming events ( 2450d59 ) Bug Fixes memory tool: create parent…",
+      "tags": [
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-25",
+      "title": "v2.1.191",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.191",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-24T21:58:12Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added /rewind support for resuming a conversation from before /clear was run Fixed scroll position jumping to the bottom while reading earlier output during a…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-25",
+      "title": "v2.1.190",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.190",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-24T15:53:56Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Bug fixes and reliability improvements",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-25",
+      "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+      "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 24 Jun 2026 06:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+      "tags": [
+        "llm",
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-25",
+      "title": "simonw/browser-compat-db",
+      "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-24T23:59:03+00:00",
+      "category": "AX · 블로그",
+      "summary": "simonw/browser-compat-db Inspired by Mozilla's new MDN MCP service - source code here - I decided to try converting their comprehensive mdn/browser-compat-data repository full of…",
+      "tags": [
+        "mcp",
+        "claude",
+        "model",
+        "workflow"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-25",
+      "title": "Quoting Tom MacWright",
+      "url": "https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-24T18:13:51+00:00",
+      "category": "AX · 블로그",
+      "summary": "In the last few months, I've started to see [job applications] that were clearly cowritten by an LLM, link to an LLM-generated portfolio site, which then links to LLM-generated…",
+      "tags": [
+        "llm",
+        "tool",
+        "prompt"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
