@@ -1,0 +1,66 @@
+{
+  "date": "2026-06-26",
+  "items": [
+    {
+      "date": "2026-06-26",
+      "title": "v2.1.193",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-25T21:45:57Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added autoMode.classifyAllShell setting to route all Bash/PowerShell commands through the auto-mode classifier instead of only arbitrary-code-execution patterns…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-26",
+      "title": "How agents are transforming work",
+      "url": "https://openai.com/index/how-agents-are-transforming-work",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Thu, 25 Jun 2026 02:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+      "tags": [
+        "agent",
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-26",
+      "title": "AI and Liability",
+      "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-25T22:28:46+00:00",
+      "category": "AX · 블로그",
+      "summary": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or…",
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-26",
+      "title": "datasette-export-database 0.3a2",
+      "url": "https://simonwillison.net/2026/Jun/25/datasette-export-database/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-25T17:21:09+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: datasette-export-database 0.3a2 An embarrassingly tiny release. The pyproject.toml had pinned to datasette==1.0a27 , inadvertently making this plugin incompatible with…",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
