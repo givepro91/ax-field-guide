@@ -1,0 +1,119 @@
+{
+  "date": "2026-06-27",
+  "items": [
+    {
+      "date": "2026-06-27",
+      "title": "v2.1.195",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.195",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-26T21:29:42Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added CLAUDE_CODE_DISABLE_MOUSE_CLICKS to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll Fixed hook matchers with hyphenated…",
+      "tags": [
+        "agent",
+        "mcp",
+        "rag",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Previewing GPT-5.6 Sol: a next-generation model",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Fri, 26 Jun 2026 10:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI previews GPT-5.6 Sol, a next-generation model with stronger capabilities in coding, science, and cybersecurity, paired with its most advanced safety stack.",
+      "tags": [
+        "openai",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Quoting Dean W. Ball",
+      "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-26T22:25:46+00:00",
+      "category": "AX · 블로그",
+      "summary": "This is a bad state of affairs. Consider, in particular, some industry dynamics: Frontier models are trained at an enormous cost, and a significant fraction of that cost is…",
+      "tags": [
+        "llm",
+        "openai",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Quoting Timothy B. Lee",
+      "url": "https://simonwillison.net/2026/Jun/26/timothy-b-lee/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-26T21:15:09+00:00",
+      "category": "AX · 블로그",
+      "summary": "This is like saying there's no learning curve to being a manager because your employees will just do whatever you tell them to do. &mdash; Timothy B. Lee , on the idea that LLMs…",
+      "tags": [
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-27",
+      "title": "What happened after 2,000 people tried to hack my AI assistant",
+      "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-26T18:33:14+00:00",
+      "category": "AX · 블로그",
+      "summary": "What happened after 2,000 people tried to hack my AI assistant Fernando Irarrázaval ran a challenge on hackmyclaw.com to see if anyone could leak secrets held by his OpenClaw test…",
+      "tags": [
+        "agent",
+        "llm",
+        "model",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Incident Report: CVE-2026-LGTM",
+      "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-26T17:58:54+00:00",
+      "category": "AX · 블로그",
+      "summary": "Incident Report: CVE-2026-LGTM Spectacular hypothetical incident report by Andrew Nesbitt. Day 2, 16:00 UTC --- Two AI review agents from competing vendors, both attached to a…",
+      "tags": [
+        "agent",
+        "llm",
+        "prompt",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Quoting OpenAI",
+      "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-26T17:10:43+00:00",
+      "category": "AX · 블로그",
+      "summary": "We're beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has…",
+      "tags": [
+        "llm",
+        "openai",
+        "model",
+        "prompt"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
