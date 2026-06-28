@@ -1,0 +1,67 @@
+{
+  "date": "2026-06-28",
+  "items": [
+    {
+      "date": "2026-06-28",
+      "title": "2026.6.3",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.3",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-06-04T01:19:41Z",
+      "category": "GitHub · MCP",
+      "summary": "Release 2026.6.3",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Release 2026.1.26",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.1.26",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-01-27T12:11:26Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.1.26 Updated packages @modelcontextprotocol/server-everything@2026.1.26 @modelcontextprotocol/server-memory@2026.1.26 mcp-server-time@2026.1.26",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Release 2026.1.14",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.1.14",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-01-14T16:35:35Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.1.14 Updated packages @modelcontextprotocol/server-everything@2026.1.14 @modelcontextprotocol/server-filesystem@2026.1.14 mcp-server-git@2026.1.14",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Release 2025.12.18",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2025.12.18",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2025-12-18T16:33:28Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2025.12.18 Updated packages @modelcontextprotocol/server-sequential-thinking@2025.12.18 @modelcontextprotocol/server-everything@2025.12.18…",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    }
+  ]
+}

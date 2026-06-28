@@ -1,6 +1,68 @@
 {
-  "updated": "2026-06-27",
+  "updated": "2026-06-28",
   "items": [
+    {
+      "date": "2026-06-28",
+      "title": "2026.6.3",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.3",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-06-04T01:19:41Z",
+      "category": "GitHub · MCP",
+      "summary": "Release 2026.6.3",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Release 2026.1.26",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.1.26",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-01-27T12:11:26Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.1.26 Updated packages @modelcontextprotocol/server-everything@2026.1.26 @modelcontextprotocol/server-memory@2026.1.26 mcp-server-time@2026.1.26",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Release 2026.1.14",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.1.14",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-01-14T16:35:35Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.1.14 Updated packages @modelcontextprotocol/server-everything@2026.1.14 @modelcontextprotocol/server-filesystem@2026.1.14 mcp-server-git@2026.1.14",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-28",
+      "title": "Release 2025.12.18",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2025.12.18",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2025-12-18T16:33:28Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2025.12.18 Updated packages @modelcontextprotocol/server-sequential-thinking@2025.12.18 @modelcontextprotocol/server-everything@2025.12.18…",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-06-27",
       "title": "v2.1.195",
@@ -544,62 +606,6 @@
       "summary": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
       "tags": [
         "openai"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "Codex-maxxing for long-running work",
-      "url": "https://openai.com/index/codex-maxxing-long-running-work",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Mon, 22 Jun 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "Learn how Jason Liu uses Codex to preserve context, manage complex projects, and help work continue beyond a single prompt.",
-      "tags": [
-        "prompt"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "Samsung Electronics brings ChatGPT and Codex to employees",
-      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Sun, 21 Jun 2026 23:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "Samsung Electronics deploys ChatGPT Enterprise and Codex to employees worldwide, marking one of OpenAI’s largest enterprise AI rollouts.",
-      "tags": [
-        "openai"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "New usage analytics and updated spend controls for enterprises",
-      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Thu, 18 Jun 2026 17:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage costs and scale AI with confidence.",
-      "tags": [
-        "openai"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "2026.6.16",
-      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.16",
-      "source": "MCP Servers",
-      "sourceCategory": "GitHub · MCP",
-      "publishedAt": "2026-06-16T14:53:11Z",
-      "category": "GitHub · MCP",
-      "summary": "Release 2026.6.16",
-      "tags": [
-        "release"
       ],
       "keyPoints": []
     }
