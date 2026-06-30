@@ -1,6 +1,95 @@
 {
-  "updated": "2026-06-29",
+  "updated": "2026-06-30",
   "items": [
+    {
+      "date": "2026-06-30",
+      "title": "v0.113.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-29T14:57:11Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.113.0 (2026-06-29) Full Changelog: v0.112.0...v0.113.0 Features api: add support for 20260318 web fetch and support tools ( 88dbfb1 ) Bug Fixes async count_tokens missing…",
+      "tags": [
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-30",
+      "title": "v2.1.196",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.196",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-29T23:27:32Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added support for organization default models — admins set it in the org console; it shows as \"Org default\" (or \"Role default\") in /model when you haven't picked…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-30",
+      "title": "Mapping Europe’s AI Workforce Opportunity",
+      "url": "https://openai.com/index/mapping-ai-jobs-transition-eu",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Mon, 29 Jun 2026 07:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "A new OpenAI report maps how AI could reshape jobs across the EU, highlighting which occupations may face automation, growth, or workflow changes.",
+      "tags": [
+        "openai",
+        "workflow"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-30",
+      "title": "HTML table extractor",
+      "url": "https://simonwillison.net/2026/Jun/29/html-table-extractor/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-29T23:38:21+00:00",
+      "category": "AX · 블로그",
+      "summary": "Tool: HTML table extractor Yet another in my growing collection of paste-conversion tools. This one accepts pasted rich text from browsers (with embedded HTML tables) and converts…",
+      "tags": [
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-30",
+      "title": "Count the number of Safari tabs",
+      "url": "https://simonwillison.net/2026/Jun/29/safari-tab-count/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-29T18:36:18+00:00",
+      "category": "AX · 블로그",
+      "summary": "Tiniest TIL, using AppleScript to count the number of open browser tabs in Safari: osascript -e 'tell application \"Safari\" to count tabs of every window' Tags: safari , til ,…",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-06-30",
+      "title": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
+      "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-29T16:17:59+00:00",
+      "category": "AX · 블로그",
+      "summary": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding This is an interesting new open weights (MIT licensed) model, the first model release from DeepReinforce. [...] with variants…",
+      "tags": [
+        "agent",
+        "llm",
+        "model",
+        "tool"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-06-29",
       "title": "HP Inc. launches Frontier strategic partnership with OpenAI",
@@ -512,94 +601,6 @@
       "summary": "0.110.0 (2026-06-18) Full Changelog: v0.109.2...v0.110.0 Features api: add support for new code_execution_20260120 tool ( 5e23212 ) Bug Fixes append x-stainless-helper across…",
       "tags": [
         "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "v0.109.2",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.2",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-15T17:30:11Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.109.2 (2026-06-15) Full Changelog: v0.109.1...v0.109.2 Chores api: remove retired models from API and SDKs ( d4bcfcc )",
-      "tags": [
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "v0.109.1",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.1",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-09T23:55:10Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.109.1 (2026-06-09) Full Changelog: v0.109.0...v0.109.1 Bug Fixes api: add frontier_llm refusal category ( d3a806b )",
-      "tags": [
-        "llm"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "v0.109.0",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-09T20:04:14Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.109.0 (2026-06-09) Full Changelog: v0.108.0...v0.109.0 Features api: add support for Managed Agents deployments and environment variable credentials ( 47633bf )",
-      "tags": [
-        "agent"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "v2.1.186",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.186",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-22T20:37:34Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Added claude mcp login and claude mcp logout to authenticate MCP servers from the CLI without opening the interactive /mcp menu, with --no-browser stdin redirect…",
-      "tags": [
-        "agent",
-        "mcp",
-        "claude",
-        "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "v2.1.185",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.185",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-20T20:59:19Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed The stream-stall hint now reads \"Waiting for API response · will retry in …\" instead of \"No response from API · Retrying in …\", and triggers after 20s of silence…",
-      "tags": [],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-06-22",
-      "title": "v2.1.183",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.183",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-19T01:20:50Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Improved auto mode safety: destructive git commands ( git reset --hard , git checkout -- . , git clean -fd , git stash drop ) are now blocked when you didn't ask to…",
-      "tags": [
-        "agent",
-        "mcp",
-        "claude",
-        "model"
       ],
       "keyPoints": []
     }
