@@ -1,0 +1,183 @@
+{
+  "date": "2026-07-01",
+  "items": [
+    {
+      "date": "2026-07-01",
+      "title": "v0.115.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-30T19:47:18Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.115.0 (2026-06-30) Full Changelog: v0.114.0...v0.115.0 Features api: add support for Managed Agents event delta streaming, agent overrides, reverse pagination, vault credential…",
+      "tags": [
+        "agent"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "v0.114.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-30T17:48:39Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.114.0 (2026-06-30) Full Changelog: v0.113.0...v0.114.0 Features api: add support for claude-sonnet-5 ( b893033 ) Bug Fixes agent_toolset: allow absolute paths that resolve…",
+      "tags": [
+        "agent",
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "v2.1.197",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.197",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-30T17:56:37Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Introducing Claude Sonnet 5: now the default model in Claude Code, with a native 1M-token context window and promotional pricing of $2/$10 per Mtok through August…",
+      "tags": [
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "How ChatGPT adoption has expanded",
+      "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 30 Jun 2026 09:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Introducing GeneBench-Pro",
+      "url": "https://openai.com/index/introducing-genebench-pro",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 30 Jun 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Core dump epidemiology: fixing an 18-year-old bug",
+      "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 30 Jun 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Inside Genebench-Pro",
+      "url": "https://openai.com/index/genebench-pro/case-studies",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 30 Jun 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Inside Genebench-Pro",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Quoting Anthropic",
+      "url": "https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-30T23:58:15+00:00",
+      "category": "AX · 블로그",
+      "summary": "We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5. We'll begin restoring access tomorrow, and will share an update…",
+      "tags": [
+        "llm",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Nano Banana 2 Lite",
+      "url": "https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-30T22:15:35+00:00",
+      "category": "AX · 블로그",
+      "summary": "Nano Banana 2 Lite Also known as Gemini 3.1 Flash Lite Image ( gemini-3.1-flash-lite-image in their API ), this is the \"fastest and cheapest Gemini image model, engineered for…",
+      "tags": [
+        "llm",
+        "gemini",
+        "model",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "What's new in Claude Sonnet 5",
+      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-30T21:23:02+00:00",
+      "category": "AX · 블로그",
+      "summary": "What&#x27;s new in Claude Sonnet 5 Claude Sonnet 5 came out this morning . I always head straight for the \"what's new\" developer docs because they tend to have more actionable…",
+      "tags": [
+        "llm",
+        "claude",
+        "model",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "The AI Compass",
+      "url": "https://simonwillison.net/2026/Jun/30/the-ai-compass/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-30T17:39:23+00:00",
+      "category": "AX · 블로그",
+      "summary": "The AI Compass This political compass style quiz by bambamramfan is pretty neat - answer 29 questions about AI and AI ethics to see which of the 30 archetypes you best fit. I'm…",
+      "tags": [
+        "rag",
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-01",
+      "title": "Have your agent record video demos of its work with shot-scraper video",
+      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-06-30T16:54:26+00:00",
+      "category": "AX · 블로그",
+      "summary": "shot-scraper video is a new command introduced in today's shot-scraper 1.10 release which accepts a storyboard.yml file defining a routine to run against a web application and…",
+      "tags": [
+        "agent",
+        "llm",
+        "tool",
+        "prompt"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
