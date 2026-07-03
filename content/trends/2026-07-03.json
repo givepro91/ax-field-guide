@@ -1,0 +1,86 @@
+{
+  "date": "2026-07-03",
+  "items": [
+    {
+      "date": "2026-07-03",
+      "title": "v0.116.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.116.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-02T19:07:55Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.116.0 (2026-07-02) Full Changelog: v0.115.1...v0.116.0 Features api: add agent-memory-2026-07-22 beta header ( e181d5c )",
+      "tags": [
+        "agent"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-03",
+      "title": "v2.1.199",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.199",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-02T23:35:18Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Stacked slash-skill invocations like /skill-a /skill-b do XYZ now load all leading skills (up to 5), not just the first Fixed SSL certificate errors (TLS-inspecting…",
+      "tags": [
+        "agent",
+        "claude",
+        "model",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-03",
+      "title": "llm-coding-agent 0.1a0",
+      "url": "https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-02T19:33:12+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: llm-coding-agent 0.1a0 Another Fable 5 experiment. Now that my LLM library has evolved into more of an agent framework it's time to see what a simple coding agent would…",
+      "tags": [
+        "agent",
+        "llm",
+        "claude",
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Using DSPy to evaluate and improve Datasette Agent's SQL system prompts",
+      "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-02T18:25:00+00:00",
+      "category": "AX · 블로그",
+      "summary": "Research: Using DSPy to evaluate and improve Datasette Agent&#x27;s SQL system prompts One of this morning's AIE keynotes covered dspy , which reminded me I've been meaning to see…",
+      "tags": [
+        "agent",
+        "eval",
+        "llm",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-03",
+      "title": "Understand to participate",
+      "url": "https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-02T17:07:14+00:00",
+      "category": "AX · 블로그",
+      "summary": "I saw Geoffrey Litt speak at AIE yesterday, and one framing he used particularly resonated with me: Understand to participate Geoffrey was talking about the challenge of…",
+      "tags": [
+        "agent",
+        "llm",
+        "model"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
