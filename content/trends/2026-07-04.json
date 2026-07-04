@@ -1,0 +1,99 @@
+{
+  "date": "2026-07-04",
+  "items": [
+    {
+      "date": "2026-07-04",
+      "title": "v2.1.201",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.201",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-03T23:50:35Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders",
+      "tags": [
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-04",
+      "title": "v2.1.200",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.200",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-03T16:52:33Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Changed AskUserQuestion dialogs to no longer auto-continue by default; opt into an idle timeout via /config Changed the \"default\" permission mode to \"Manual\" across…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Open Source AI Gap Map",
+      "url": "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-03T22:04:31+00:00",
+      "category": "AX · 블로그",
+      "summary": "Open Source AI Gap Map Current AI is \"a global partnership building a public option for AI\", founded as a non-profit at the AI Action Summit in Paris in February 2025 and backed…",
+      "tags": [
+        "llm",
+        "model",
+        "tool",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Quoting Josh W. Comeau",
+      "url": "https://simonwillison.net/2026/Jul/3/josh-w-comeau/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-03T21:25:52+00:00",
+      "category": "AX · 블로그",
+      "summary": "I just launched my third course, Whimsical Animations, and so far, it’s on track to sell roughly ⅓ as many copies as a typical course launch. It’s a similar story with my two…",
+      "tags": [
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Fable's judgement",
+      "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-03T18:51:06+00:00",
+      "category": "AX · 블로그",
+      "summary": "One of the most interesting tips I got from the Fireside Chat I hosted with Cat Wu and Thariq Shihipar from the Claude Code team at AIE on Wednesday was to let Fable (and to a…",
+      "tags": [
+        "agent",
+        "llm",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-04",
+      "title": "June 2026 newsletter",
+      "url": "https://simonwillison.net/2026/Jul/3/june-newsletter/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-03T14:50:50+00:00",
+      "category": "AX · 블로그",
+      "summary": "The June edition of my sponsors-only monthly newsletter is out. If you are a sponsor (or if you start a sponsorship now) you can access it here . This month: Claude Fable 5,…",
+      "tags": [
+        "claude",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
