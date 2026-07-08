@@ -1,0 +1,150 @@
+{
+  "date": "2026-07-08",
+  "items": [
+    {
+      "date": "2026-07-08",
+      "title": "v2.1.204",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.204",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-08T00:27:50Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "v2.1.203",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.203",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-07T21:06:12Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted Added a grey ⏸ badge to the footer when in…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "Australian Payments Plus moves faster with ChatGPT and Codex",
+      "url": "https://openai.com/index/australian-payments-plus",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "See how Australian Payments Plus uses ChatGPT Enterprise and Codex to move faster through payments complexity. AP+ saves time, improves quality, and keeps human judgment central.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "MUFG aims to become AI-native with OpenAI",
+      "url": "https://openai.com/index/mufg",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+      "tags": [
+        "openai",
+        "workflow"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "2026.6.16",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.16",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-06-16T14:53:11Z",
+      "category": "GitHub · MCP",
+      "summary": "Release 2026.6.16",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "sqlite-utils 4.0, now with database schema migrations",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-07T19:32:57+00:00",
+      "category": "AX · 블로그",
+      "summary": "This morning I released sqlite-utils 4.0 , the 124th release of that project and the first major version bump since 3.0 in November 2020. In addition to some small but significant…",
+      "tags": [
+        "agent",
+        "rag",
+        "llm",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "sqlite-migrate 0.2",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-07T16:33:55+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: sqlite-migrate 0.2 The version that retires the library, instead implementing a compatibility shim against the new sqlite-utils 4.0 dependency. Tags: sqlite-utils",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "github-code Web Component",
+      "url": "https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-07T16:18:16+00:00",
+      "category": "AX · 블로그",
+      "summary": "Tool: github-code Web Component An experimental Web Component built using GPT-5.5 and the following prompt : let's build a Web Component for embedding code from GitHub It takes…",
+      "tags": [
+        "tool",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "sqlite-utils 4.0",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-07T15:42:43+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: sqlite-utils 4.0 See sqlite-utils 4.0, now with database schema migrations for details. Tags: sqlite-utils",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-08",
+      "title": "sqlite-utils 4.0rc4",
+      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-07T05:36:15+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: sqlite-utils 4.0rc4 The last RC before the 4.0 stable release. Mainly implements feedback from a detailed review by Claude Fable 5. Tags: sqlite-utils ,…",
+      "tags": [
+        "claude",
+        "release"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
