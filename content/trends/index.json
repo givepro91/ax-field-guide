@@ -1,6 +1,143 @@
 {
-  "updated": "2026-07-08",
+  "updated": "2026-07-09",
   "items": [
+    {
+      "date": "2026-07-09",
+      "title": "v0.113.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-29T14:57:11Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.113.0 (2026-06-29) Full Changelog: v0.112.0...v0.113.0 Features api: add support for 20260318 web fetch and support tools ( 88dbfb1 ) Bug Fixes async count_tokens missing…",
+      "tags": [
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "v2.1.205",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-08T21:22:06Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added an auto mode rule that blocks tampering with session transcript files Fixed --json-schema silently producing unstructured output when the schema was invalid,…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Our approach to government and national security partnerships",
+      "url": "https://openai.com/index/government-national-security-partnerships",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 08 Jul 2026 13:30:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Learn how OpenAI approaches government and national security partnerships, with principles for responsible AI use, democratic accountability, and public safety.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Separating signal from noise in coding evaluations",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 08 Jul 2026 13:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
+      "tags": [
+        "eval",
+        "openai",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Helping K–12 educators build practical AI skills",
+      "url": "https://openai.com/index/k-12-educators-practical-skills",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 08 Jul 2026 10:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI Academy and the Walton Family Foundation are bringing hands-on AI Skills Jams to help K–12 educators build practical AI skills for the classroom.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Introducing GPT-Live",
+      "url": "https://openai.com/index/introducing-gpt-live",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 08 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
+      "tags": [
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Rewriting Bun in Rust",
+      "url": "https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-08T23:57:21+00:00",
+      "category": "AX · 블로그",
+      "summary": "Rewriting Bun in Rust Jarred Sumner has been promising this blog post ( since May 9th ) about his Zig to Rust rewrite of Bun for significantly longer than it took him to finish…",
+      "tags": [
+        "agent",
+        "llm",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Introducing GPT‑Live",
+      "url": "https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-08T23:20:48+00:00",
+      "category": "AX · 블로그",
+      "summary": "Introducing GPT‑Live OpenAI finally upgraded the model used by ChatGPT voice mode! I've had preview access for a few weeks in the iPhone app, and the new model is very impressive.…",
+      "tags": [
+        "llm",
+        "openai",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Quoting Kenton Varda",
+      "url": "https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-08T20:03:34+00:00",
+      "category": "AX · 블로그",
+      "summary": "I just declared a moratorium against AI-written change descriptions (e.g. PR and commit messages, also issues/tickets) from my team. AI was writing change descriptions that were…",
+      "tags": [
+        "llm"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-07-08",
       "title": "v2.1.204",
@@ -472,136 +609,6 @@
         "eval",
         "llm",
         "claude"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-03",
-      "title": "Understand to participate",
-      "url": "https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-02T17:07:14+00:00",
-      "category": "AX · 블로그",
-      "summary": "I saw Geoffrey Litt speak at AIE yesterday, and one framing he used particularly resonated with me: Understand to participate Geoffrey was talking about the challenge of…",
-      "tags": [
-        "agent",
-        "llm",
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-02",
-      "title": "v0.115.1",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.1",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-01T21:54:06Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.115.1 (2026-07-01) Full Changelog: v0.115.0...v0.115.1 Chores api: remove some nonfunctional types from the SDKs ( 5e7c431 )",
-      "tags": [],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-02",
-      "title": "v2.1.198",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.198",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-01T20:45:36Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Claude in Chrome is now generally available Added background agent notifications in claude agents — sessions that need input or finish now fire the Notification…",
-      "tags": [
-        "agent",
-        "claude",
-        "model",
-        "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-01",
-      "title": "v0.115.0",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-30T19:47:18Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.115.0 (2026-06-30) Full Changelog: v0.114.0...v0.115.0 Features api: add support for Managed Agents event delta streaming, agent overrides, reverse pagination, vault credential…",
-      "tags": [
-        "agent"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-01",
-      "title": "v0.114.0",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-30T17:48:39Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.114.0 (2026-06-30) Full Changelog: v0.113.0...v0.114.0 Features api: add support for claude-sonnet-5 ( b893033 ) Bug Fixes agent_toolset: allow absolute paths that resolve…",
-      "tags": [
-        "agent",
-        "claude",
-        "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-01",
-      "title": "v2.1.197",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.197",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-30T17:56:37Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Introducing Claude Sonnet 5: now the default model in Claude Code, with a native 1M-token context window and promotional pricing of $2/$10 per Mtok through August…",
-      "tags": [
-        "claude",
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-01",
-      "title": "How ChatGPT adoption has expanded",
-      "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 30 Jun 2026 09:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
-      "tags": [
-        "openai"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-01",
-      "title": "Introducing GeneBench-Pro",
-      "url": "https://openai.com/index/introducing-genebench-pro",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 30 Jun 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
-      "tags": [],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-01",
-      "title": "Core dump epidemiology: fixing an 18-year-old bug",
-      "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 30 Jun 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
-      "tags": [
-        "openai"
       ],
       "keyPoints": []
     }
