@@ -1,0 +1,52 @@
+{
+  "date": "2026-07-12",
+  "items": [
+    {
+      "date": "2026-07-12",
+      "title": "Release 2026.7.4",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-07-04T23:05:56Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.7.4 Updated packages @modelcontextprotocol/server-everything@2026.7.4 @modelcontextprotocol/server-filesystem@2026.7.4…",
+      "tags": [
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-12",
+      "title": "Release 2026.1.26",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.1.26",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-01-27T12:11:26Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.1.26 Updated packages @modelcontextprotocol/server-everything@2026.1.26 @modelcontextprotocol/server-memory@2026.1.26 mcp-server-time@2026.1.26",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-12",
+      "title": "sqlite-utils 4.1",
+      "url": "https://simonwillison.net/2026/Jul/11/sqlite-utils/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-11T23:50:20+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: sqlite-utils 4.1 The first dot-release since 4.0 a few days ago , introducing a number of minor new features. sqlite-utils insert and sqlite-utils upsert now accept a…",
+      "tags": [
+        "model",
+        "prompt",
+        "release"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
