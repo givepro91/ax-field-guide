@@ -1,6 +1,82 @@
 {
-  "updated": "2026-07-12",
+  "updated": "2026-07-13",
   "items": [
+    {
+      "date": "2026-07-13",
+      "title": "2026.6.3",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.3",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-06-04T01:19:41Z",
+      "category": "GitHub · MCP",
+      "summary": "Release 2026.6.3",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Directly Responsible Individuals (DRI)",
+      "url": "https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-12T23:57:14+00:00",
+      "category": "AX · 블로그",
+      "summary": "Directly Responsible Individuals (DRI) I went looking for a definition of \"Directly Responsible Individuals\" and the best I found was in the GitLab handbook. Apparently the term…",
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-13",
+      "title": "shot-scraper 1.11",
+      "url": "https://simonwillison.net/2026/Jul/12/shot-scraper/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-12T23:46:52+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: shot-scraper 1.11 Some minor improvements, mainly around command option consistency and making the server: mechanism used by both shot-scraper video and shot-scraper…",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-13",
+      "title": "Fable gets another bump",
+      "url": "https://simonwillison.net/2026/Jul/12/bump/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-12T21:20:07+00:00",
+      "category": "AX · 블로그",
+      "summary": "One of the consequences of GPT-5.6 Sol being clearly a Fable/Mythos class model is that Anthropic have, once again, bumped the date that Fable stops being available in their…",
+      "tags": [
+        "llm",
+        "claude",
+        "openai",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-13",
+      "title": "sqlite-utils 4.1.1",
+      "url": "https://simonwillison.net/2026/Jul/12/sqlite-utils/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-12T20:55:30+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: sqlite-utils 4.1.1 Mainly a fix for an edge case that regular Claude chat spotted while experimenting with the 4.1 release to answer a question about ON DELETE.…",
+      "tags": [
+        "rag",
+        "claude",
+        "release"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-07-12",
       "title": "Release 2026.7.4",
@@ -520,81 +596,6 @@
       "category": "GitHub · MCP",
       "summary": "Release 2026.6.16",
       "tags": [
-        "release"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "sqlite-utils 4.0, now with database schema migrations",
-      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-07T19:32:57+00:00",
-      "category": "AX · 블로그",
-      "summary": "This morning I released sqlite-utils 4.0 , the 124th release of that project and the first major version bump since 3.0 in November 2020. In addition to some small but significant…",
-      "tags": [
-        "agent",
-        "rag",
-        "llm",
-        "claude"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "sqlite-migrate 0.2",
-      "url": "https://simonwillison.net/2026/Jul/7/sqlite-migrate/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-07T16:33:55+00:00",
-      "category": "AX · 블로그",
-      "summary": "Release: sqlite-migrate 0.2 The version that retires the library, instead implementing a compatibility shim against the new sqlite-utils 4.0 dependency. Tags: sqlite-utils",
-      "tags": [
-        "release"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "github-code Web Component",
-      "url": "https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-07T16:18:16+00:00",
-      "category": "AX · 블로그",
-      "summary": "Tool: github-code Web Component An experimental Web Component built using GPT-5.5 and the following prompt : let's build a Web Component for embedding code from GitHub It takes…",
-      "tags": [
-        "tool",
-        "prompt"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "sqlite-utils 4.0",
-      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-07T15:42:43+00:00",
-      "category": "AX · 블로그",
-      "summary": "Release: sqlite-utils 4.0 See sqlite-utils 4.0, now with database schema migrations for details. Tags: sqlite-utils",
-      "tags": [
-        "release"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "sqlite-utils 4.0rc4",
-      "url": "https://simonwillison.net/2026/Jul/7/sqlite-utils-2/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-07T05:36:15+00:00",
-      "category": "AX · 블로그",
-      "summary": "Release: sqlite-utils 4.0rc4 The last RC before the 4.0 stable release. Mainly implements feedback from a detailed review by Claude Fable 5. Tags: sqlite-utils ,…",
-      "tags": [
-        "claude",
         "release"
       ],
       "keyPoints": []
