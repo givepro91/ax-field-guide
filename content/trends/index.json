@@ -1,6 +1,83 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-14",
   "items": [
+    {
+      "date": "2026-07-14",
+      "title": "v2.1.208",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.208",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-14T01:10:42Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added screen reader mode: opt-in plain-text rendering for screen reader users. Run claude --ax-screen-reader , set CLAUDE_AX_SCREEN_READER=1, or add…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-14",
+      "title": "Getting started with ChatGPT",
+      "url": "https://openai.com/academy/getting-started",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Fri, 10 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-14",
+      "title": "Using uvx in GitHub Actions in a cache-friendly way",
+      "url": "https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-14T00:56:20+00:00",
+      "category": "AX · 블로그",
+      "summary": "TIL: Using uvx in GitHub Actions in a cache-friendly way I finally found a cache-friendly recipe for using uvx tool-name in GitHub Actions workflows that I like. The trick is…",
+      "tags": [
+        "tool",
+        "workflow"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-14",
+      "title": "DOOMQL",
+      "url": "https://simonwillison.net/2026/Jul/13/doomql/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-13T22:34:41+00:00",
+      "category": "AX · 블로그",
+      "summary": "DOOMQL Peter Gostev built this using GPT-5.6 Sol. This is a lot of fun: DOOMQL started with a deliberately unreasonable question: what if SQLite were the game engine, not merely…",
+      "tags": [
+        "llm",
+        "claude",
+        "prompt",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-14",
+      "title": "datasette code-frequency chart on GitHub",
+      "url": "https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-13T21:45:27+00:00",
+      "category": "AX · 블로그",
+      "summary": "datasette code-frequency chart on GitHub Out of curiosity I decided to see if I could find a useful illustration of the impact of coding agents and Opus 4.5 class models on my own…",
+      "tags": [
+        "agent",
+        "llm",
+        "model"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-07-13",
       "title": "2026.6.3",
@@ -527,76 +604,6 @@
       "summary": "I just declared a moratorium against AI-written change descriptions (e.g. PR and commit messages, also issues/tickets) from my team. AI was writing change descriptions that were…",
       "tags": [
         "llm"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "v2.1.204",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.204",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-08T00:27:50Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook",
-      "tags": [],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "v2.1.203",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.203",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-07T21:06:12Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Added a warning when your login is about to expire, so you can re-authenticate before background sessions are interrupted Added a grey ⏸ badge to the footer when in…",
-      "tags": [
-        "agent",
-        "mcp",
-        "claude",
-        "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "Australian Payments Plus moves faster with ChatGPT and Codex",
-      "url": "https://openai.com/index/australian-payments-plus",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "See how Australian Payments Plus uses ChatGPT Enterprise and Codex to move faster through payments complexity. AP+ saves time, improves quality, and keeps human judgment central.",
-      "tags": [],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "MUFG aims to become AI-native with OpenAI",
-      "url": "https://openai.com/index/mufg",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 07 Jul 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-      "tags": [
-        "openai",
-        "workflow"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-08",
-      "title": "2026.6.16",
-      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.16",
-      "source": "MCP Servers",
-      "sourceCategory": "GitHub · MCP",
-      "publishedAt": "2026-06-16T14:53:11Z",
-      "category": "GitHub · MCP",
-      "summary": "Release 2026.6.16",
-      "tags": [
-        "release"
       ],
       "keyPoints": []
     }
