@@ -1,6 +1,165 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-15",
   "items": [
+    {
+      "date": "2026-07-15",
+      "title": "v2.1.210",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.210",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-14T23:45:25Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck Added a startup warning for…",
+      "tags": [
+        "agent",
+        "mcp",
+        "rag",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "v2.1.209",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.209",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-14T06:36:28Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)",
+      "tags": [
+        "agent",
+        "claude",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "How to manage AI investments in the agentic era",
+      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 14 Jul 2026 10:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Learn how enterprises can manage AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows.",
+      "tags": [
+        "agent",
+        "workflow"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "How data science teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 14 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "How sales teams use ChatGPT Work",
+      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Tue, 14 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "2026.6.16",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.16",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-06-16T14:53:11Z",
+      "category": "GitHub · MCP",
+      "summary": "Release 2026.6.16",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Quoting GitHub Changelog",
+      "url": "https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-14T22:43:35+00:00",
+      "category": "AX · 블로그",
+      "summary": "Dependabot now waits until a new release has been available on its registry for at least three days before opening a version update pull request. This cooldown is now the default…",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "simonw/pedalican",
+      "url": "https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-14T22:29:45+00:00",
+      "category": "AX · 블로그",
+      "summary": "simonw/pedalican Clearly I wasn't paying attention when these were first announced back in May, but today I accidentally activated a \"pet\" in Codex Desktop - a little animated…",
+      "tags": [
+        "agent",
+        "llm",
+        "openai",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "lobste.rs is now running on SQLite",
+      "url": "https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-14T19:44:11+00:00",
+      "category": "AX · 블로그",
+      "summary": "lobste.rs is now running on SQLite Community site Lobsters has been planning a migration away from MariaDB since August 2018 - originally targeting PostgreSQL, but last year they…",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Quoting Armin Ronacher",
+      "url": "https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-14T18:04:23+00:00",
+      "category": "AX · 블로그",
+      "summary": "The shared language of a software project is not English or Python but it is the common understanding of what its concepts mean, where the boundaries are, which invariants matter,…",
+      "tags": [
+        "agent",
+        "rag",
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-15",
+      "title": "datasette 1.0a37",
+      "url": "https://simonwillison.net/2026/Jul/14/datasette/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-14T16:31:41+00:00",
+      "category": "AX · 블로그",
+      "summary": "Release: datasette 1.0a37 A minor release. Performance and documentation improvements to the permissions system, plus I reverted a cosmetic API change which caused almost every…",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-07-14",
       "title": "v2.1.208",
@@ -433,177 +592,6 @@
         "eval",
         "llm",
         "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-10",
-      "title": "llm-meta-ai 0.1",
-      "url": "https://simonwillison.net/2026/Jul/9/llm-meta-ai/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-09T16:12:20+00:00",
-      "category": "AX · 블로그",
-      "summary": "Release: llm-meta-ai 0.1 Let's LLM run prompts against the new muse-spark-1.1 model. Tags: llm , meta",
-      "tags": [
-        "llm",
-        "model",
-        "prompt",
-        "release"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-10",
-      "title": "llm 0.31.1",
-      "url": "https://simonwillison.net/2026/Jul/9/llm/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-09T16:06:15+00:00",
-      "category": "AX · 블로그",
-      "summary": "Release: llm 0.31.1 Fix for a bug with OpenAI Chat Completion endpoints where a tool call with empty arguments could result in a JSON error from some providers. #1521 This bug…",
-      "tags": [
-        "llm",
-        "openai",
-        "tool",
-        "release"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "v0.113.0",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0",
-      "source": "Anthropic",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-06-29T14:57:11Z",
-      "category": "Anthropic / Claude",
-      "summary": "0.113.0 (2026-06-29) Full Changelog: v0.112.0...v0.113.0 Features api: add support for 20260318 web fetch and support tools ( 88dbfb1 ) Bug Fixes async count_tokens missing…",
-      "tags": [
-        "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "v2.1.205",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-08T21:22:06Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Added an auto mode rule that blocks tampering with session transcript files Fixed --json-schema silently producing unstructured output when the schema was invalid,…",
-      "tags": [
-        "agent",
-        "mcp",
-        "claude",
-        "tool"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Our approach to government and national security partnerships",
-      "url": "https://openai.com/index/government-national-security-partnerships",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Wed, 08 Jul 2026 13:30:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "Learn how OpenAI approaches government and national security partnerships, with principles for responsible AI use, democratic accountability, and public safety.",
-      "tags": [
-        "openai"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Separating signal from noise in coding evaluations",
-      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Wed, 08 Jul 2026 13:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
-      "tags": [
-        "eval",
-        "openai",
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Helping K–12 educators build practical AI skills",
-      "url": "https://openai.com/index/k-12-educators-practical-skills",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Wed, 08 Jul 2026 10:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "OpenAI Academy and the Walton Family Foundation are bringing hands-on AI Skills Jams to help K–12 educators build practical AI skills for the classroom.",
-      "tags": [
-        "openai"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Introducing GPT-Live",
-      "url": "https://openai.com/index/introducing-gpt-live",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Wed, 08 Jul 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
-      "tags": [
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Rewriting Bun in Rust",
-      "url": "https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-08T23:57:21+00:00",
-      "category": "AX · 블로그",
-      "summary": "Rewriting Bun in Rust Jarred Sumner has been promising this blog post ( since May 9th ) about his Zig to Rust rewrite of Bun for significantly longer than it took him to finish…",
-      "tags": [
-        "agent",
-        "llm",
-        "claude",
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Introducing GPT‑Live",
-      "url": "https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-08T23:20:48+00:00",
-      "category": "AX · 블로그",
-      "summary": "Introducing GPT‑Live OpenAI finally upgraded the model used by ChatGPT voice mode! I've had preview access for a few weeks in the iPhone app, and the new model is very impressive.…",
-      "tags": [
-        "llm",
-        "openai",
-        "model",
-        "release"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Quoting Kenton Varda",
-      "url": "https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-08T20:03:34+00:00",
-      "category": "AX · 블로그",
-      "summary": "I just declared a moratorium against AI-written change descriptions (e.g. PR and commit messages, also issues/tickets) from my team. AI was writing change descriptions that were…",
-      "tags": [
-        "llm"
       ],
       "keyPoints": []
     }
