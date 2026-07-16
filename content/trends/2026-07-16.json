@@ -1,0 +1,116 @@
+{
+  "date": "2026-07-16",
+  "items": [
+    {
+      "date": "2026-07-16",
+      "title": "v0.113.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-29T14:57:11Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.113.0 (2026-06-29) Full Changelog: v0.112.0...v0.113.0 Features api: add support for 20260318 web fetch and support tools ( 88dbfb1 ) Bug Fixes async count_tokens missing…",
+      "tags": [
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-16",
+      "title": "v2.1.211",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.211",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-15T23:02:35Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added --forward-subagent-text flag and CLAUDE_CODE_FORWARD_SUBAGENT_TEXT environment variable to include subagent text and thinking in stream-json output Fixed…",
+      "tags": [
+        "agent",
+        "mcp",
+        "llm",
+        "claude"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-16",
+      "title": "The US is advancing AI safety through state and federal action",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 15 Jul 2026 12:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-16",
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Wed, 15 Jul 2026 10:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
+      "tags": [
+        "openai",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-16",
+      "title": "Mermaid to Unicode box art (grok-mermaid)",
+      "url": "https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-16T00:33:18+00:00",
+      "category": "AX · 블로그",
+      "summary": "Tool: Mermaid to Unicode box art (grok-mermaid) While exploring the codebase for the newly open-sourced Grok CLI coding agent I came across xai-grok-markdown/src/mermaid.rs , a…",
+      "tags": [
+        "agent",
+        "claude",
+        "tool",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-16",
+      "title": "xai-org/grok-build, now open source",
+      "url": "https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-15T23:59:30+00:00",
+      "category": "AX · 블로그",
+      "summary": "xai-org/grok-build, now open source xAI's grok CLI tool faced severe community backlash yesterday when it became apparent that running the command in a directory could upload that…",
+      "tags": [
+        "agent",
+        "llm",
+        "claude",
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-16",
+      "title": "How I tricked Claude into leaking your deepest, darkest secrets",
+      "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-15T14:21:54+00:00",
+      "category": "AX · 블로그",
+      "summary": "How I tricked Claude into leaking your deepest, darkest secrets I've been impressed by the way the Claude web_fetch tool is designed to avoid data exfiltration attacks. Ayush Paul…",
+      "tags": [
+        "agent",
+        "rag",
+        "llm",
+        "claude"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
