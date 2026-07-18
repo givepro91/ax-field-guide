@@ -1,0 +1,133 @@
+{
+  "date": "2026-07-18",
+  "items": [
+    {
+      "date": "2026-07-18",
+      "title": "v0.116.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.116.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-02T19:07:55Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.116.0 (2026-07-02) Full Changelog: v0.115.1...v0.116.0 Features api: add agent-memory-2026-07-22 beta header ( e181d5c )",
+      "tags": [
+        "agent"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "v0.115.1",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.1",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-01T21:54:06Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.115.1 (2026-07-01) Full Changelog: v0.115.0...v0.115.1 Chores api: remove some nonfunctional types from the SDKs ( 5e7c431 )",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "v0.115.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-30T19:47:18Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.115.0 (2026-06-30) Full Changelog: v0.114.0...v0.115.0 Features api: add support for Managed Agents event delta streaming, agent overrides, reverse pagination, vault credential…",
+      "tags": [
+        "agent"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "v0.114.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-06-30T17:48:39Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.114.0 (2026-06-30) Full Changelog: v0.113.0...v0.114.0 Features api: add support for claude-sonnet-5 ( b893033 ) Bug Fixes agent_toolset: allow absolute paths that resolve…",
+      "tags": [
+        "agent",
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "A scorecard for the AI age",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Fri, 17 Jul 2026 10:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
+      "tags": [
+        "openai"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Release 2026.7.10",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.10",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-07-10T03:39:07Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.7.10 Updated packages @modelcontextprotocol/server-filesystem@2026.7.10 mcp-server-time@2026.7.10 mcp-server-fetch@2026.7.10 mcp-server-git@2026.7.10",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Quoting Kimi K3",
+      "url": "https://simonwillison.net/2026/Jul/17/kimi-k3/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-17T13:43:53+00:00",
+      "category": "AX · 블로그",
+      "summary": "Is there something I can actually help you with today? &mdash; Kimi K3 , after refusing to leak its system prompt Tags: kimi , ai-personality , generative-ai , ai , llms",
+      "tags": [
+        "llm",
+        "prompt"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "LLM cliché highlighter",
+      "url": "https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-17T12:11:11+00:00",
+      "category": "AX · 블로그",
+      "summary": "Tool: LLM cliché highlighter I got frustrated reading yet another article that was crammed with the clichés of LLM-generated writing - \"no fluff, no filler, no jargon\" type stuff…",
+      "tags": [
+        "llm",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Spot birds not golf",
+      "url": "https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-17T02:58:07+00:00",
+      "category": "AX · 블로그",
+      "summary": "Suggestion for hyperscalers feeling pressure over data center water use: Buy up a few exclusive country clubs, convert the golf courses into public parks, pay for guides and…",
+      "tags": [],
+      "keyPoints": []
+    }
+  ]
+}
