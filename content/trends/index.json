@@ -1,6 +1,101 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-21",
   "items": [
+    {
+      "date": "2026-07-21",
+      "title": "v2.1.216",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.216",
+      "source": "Claude Code",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-20T22:14:00Z",
+      "category": "Anthropic / Claude",
+      "summary": "What's changed Added sandbox.filesystem.disabled setting to skip filesystem isolation while keeping network egress control Fixed a slowdown in long sessions where message…",
+      "tags": [
+        "agent",
+        "mcp",
+        "claude",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Safety and alignment in an era of long-horizon models",
+      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Mon, 20 Jul 2026 10:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
+      "tags": [
+        "openai",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-21",
+      "title": "2026.6.16",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.6.16",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-06-16T14:53:11Z",
+      "category": "GitHub · MCP",
+      "summary": "Release 2026.6.16",
+      "tags": [
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Reverse-engineering is cheap now",
+      "url": "https://simonwillison.net/2026/Jul/20/cheap-reverse-engineering/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-20T19:24:05+00:00",
+      "category": "AX · 블로그",
+      "summary": "I keep hearing anecdotes from people who used coding agents to reverse-engineer and automate devices in their homes. I think this is an interesting illustration of the impact of…",
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Who’s Afraid of Chinese Models?",
+      "url": "https://simonwillison.net/2026/Jul/20/afraid-of-chinese-models/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-20T17:09:19+00:00",
+      "category": "AX · 블로그",
+      "summary": "Who’s Afraid of Chinese Models? Interesting proposal from Ben Thompson that both addresses the hypocrisy of labs outlawing distillation against their models despite training on…",
+      "tags": [
+        "rag",
+        "llm",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-21",
+      "title": "Quoting Sam Altman",
+      "url": "https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-20T03:47:59+00:00",
+      "category": "AX · 블로그",
+      "summary": "We have been having extensive discussions around open source strategy. We will discuss it more at our next board meeting, but one thing we’d like to do soon is to create a…",
+      "tags": [
+        "rag",
+        "llm",
+        "openai",
+        "model"
+      ],
+      "keyPoints": []
+    },
     {
       "date": "2026-07-20",
       "title": "v2.1.215",
@@ -512,95 +607,6 @@
         "claude",
         "openai"
       ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-16",
-      "title": "How I tricked Claude into leaking your deepest, darkest secrets",
-      "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything",
-      "source": "Simon Willison",
-      "sourceCategory": "AX · 블로그",
-      "publishedAt": "2026-07-15T14:21:54+00:00",
-      "category": "AX · 블로그",
-      "summary": "How I tricked Claude into leaking your deepest, darkest secrets I've been impressed by the way the Claude web_fetch tool is designed to avoid data exfiltration attacks. Ayush Paul…",
-      "tags": [
-        "agent",
-        "rag",
-        "llm",
-        "claude"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-15",
-      "title": "v2.1.210",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.210",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-14T23:45:25Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Added a live elapsed-time counter to the collapsed tool summary line so long-running tool calls visibly tick instead of looking stuck Added a startup warning for…",
-      "tags": [
-        "agent",
-        "mcp",
-        "rag",
-        "claude"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-15",
-      "title": "v2.1.209",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.209",
-      "source": "Claude Code",
-      "sourceCategory": "Anthropic / Claude",
-      "publishedAt": "2026-07-14T06:36:28Z",
-      "category": "Anthropic / Claude",
-      "summary": "What's changed Fixed /model and other dialogs being blocked in claude agents background sessions (reverts an overly broad guard)",
-      "tags": [
-        "agent",
-        "claude",
-        "model"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-15",
-      "title": "How to manage AI investments in the agentic era",
-      "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 14 Jul 2026 10:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "Learn how enterprises can manage AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows.",
-      "tags": [
-        "agent",
-        "workflow"
-      ],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-15",
-      "title": "How data science teams use ChatGPT Work",
-      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 14 Jul 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
-      "tags": [],
-      "keyPoints": []
-    },
-    {
-      "date": "2026-07-15",
-      "title": "How sales teams use ChatGPT Work",
-      "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-      "source": "OpenAI",
-      "sourceCategory": "OpenAI · 모델사",
-      "publishedAt": "Tue, 14 Jul 2026 00:00:00 GMT",
-      "category": "OpenAI · 모델사",
-      "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
-      "tags": [],
       "keyPoints": []
     }
   ]
