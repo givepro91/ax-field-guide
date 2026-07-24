@@ -1,0 +1,96 @@
+{
+  "date": "2026-07-24",
+  "items": [
+    {
+      "date": "2026-07-24",
+      "title": "v0.119.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-23T17:34:23Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.119.0 (2026-07-23) Full Changelog: v0.118.0...v0.119.0 Features api: add new stop reason 'model_context_window_exceeded' ( d983cde ) Bug Fixes tools: handle binary files in…",
+      "tags": [
+        "agent",
+        "model",
+        "tool"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-24",
+      "title": "v0.117.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0",
+      "source": "Anthropic",
+      "sourceCategory": "Anthropic / Claude",
+      "publishedAt": "2026-07-16T19:36:01Z",
+      "category": "Anthropic / Claude",
+      "summary": "0.117.0 (2026-07-16) Full Changelog: v0.116.0...v0.117.0 Features api: add support for dreaming ( 642eee7 ) api: add support for MCP Tunnels ( d716df6 ) Bug Fixes credentials:…",
+      "tags": [
+        "mcp",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Launching Health in ChatGPT",
+      "url": "https://openai.com/index/health-in-chatgpt",
+      "source": "OpenAI",
+      "sourceCategory": "OpenAI · 모델사",
+      "publishedAt": "Thu, 23 Jul 2026 00:00:00 GMT",
+      "category": "OpenAI · 모델사",
+      "summary": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
+      "tags": [],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Release 2026.7.10",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.10",
+      "source": "MCP Servers",
+      "sourceCategory": "GitHub · MCP",
+      "publishedAt": "2026-07-10T03:39:07Z",
+      "category": "GitHub · MCP",
+      "summary": "Release : v2026.7.10 Updated packages @modelcontextprotocol/server-filesystem@2026.7.10 mcp-server-time@2026.7.10 mcp-server-fetch@2026.7.10 mcp-server-git@2026.7.10",
+      "tags": [
+        "mcp",
+        "model",
+        "release"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-24",
+      "title": "The first known runaway AI agent - or a very bad marketing stunt?",
+      "url": "https://simonwillison.net/2026/Jul/23/the-first-known-runaway-ai-agent/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-23T22:53:08+00:00",
+      "category": "AX · 블로그",
+      "summary": "The first known runaway AI agent - or a very bad marketing stunt? Martin Alderson's commentary on the OpenAI accidental cyberattack against Hugging Face includes a couple of…",
+      "tags": [
+        "agent",
+        "llm",
+        "openai",
+        "model"
+      ],
+      "keyPoints": []
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Quoting Seth Larson",
+      "url": "https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything",
+      "source": "Simon Willison",
+      "sourceCategory": "AX · 블로그",
+      "publishedAt": "2026-07-23T04:50:36+00:00",
+      "category": "AX · 블로그",
+      "summary": "The Python Package Index (PyPI) now rejects new files being uploaded to releases that are older than 14 days. This restriction was put in place to prevent old and long-stable…",
+      "tags": [
+        "workflow",
+        "release"
+      ],
+      "keyPoints": []
+    }
+  ]
+}
